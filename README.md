@@ -139,10 +139,11 @@ cd doc && python3 -m http.server 9100
 
 本项目的功能即依据这些文档逐条复刻与校验。仓库内另含：
 
+- [`docs/USAGE.md`](docs/USAGE.md) —— **使用文档**（安装、启动、后台操作、CRUD 生成器、命令行、组件用法）
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) —— 架构与设计说明
 - `docs/baseline-report.md` —— 测试基线报告
 - `ts/docs/feature-audit.md` —— 功能审计
 - `ts/docs/visual-smoke.md` —— 可视化冒烟清单
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) —— 架构与设计说明
 
 ---
 
