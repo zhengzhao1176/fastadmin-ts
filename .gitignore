@@ -31,10 +31,10 @@ node_modules/
 /task0514/
 /v/
 
-# ---- doc mirror internals --------------------------------------------------
-# doc/*.html (the FastAdmin usage docs) ARE committed; the crawl tooling,
-# screenshots and QA logs under doc/_meta/ are not.
-/doc/_meta/
+# ---- FastAdmin official docs mirror ----------------------------------------
+# doc/ is a local mirror of the copyrighted FastAdmin official documentation
+# (https://doc.fastadmin.net/) — NOT redistributed in this repo.
+/doc/
 
 # ---- editor / OS / tooling -------------------------------------------------
 .DS_Store
