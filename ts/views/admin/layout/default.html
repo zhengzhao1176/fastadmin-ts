@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> common/meta }}
+  </head>
+  <body class="inside-header inside-aside">
+    <div id="main" role="main">
+      <div class="tab-content tab-addtabs">
+        <div id="content">
+          <div class="row">
+            <div class="col-xs-12">
+              <section class="content-header hide">
+                <h1>FastAdmin <small>Control panel</small></h1>
+              </section>
+              <div class="content">
+                {{ __CONTENT__|raw }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> common/script }}
+  </body>
+</html>

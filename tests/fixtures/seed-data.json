@@ -1,0 +1,19 @@
+{
+  "admin": {
+    "super":    { "id": 1, "username": "admin",     "password": "123456", "salt": "test", "group_id": 1 },
+    "subadmin": { "id": 2, "username": "subadmin",  "password": "123456", "salt": "subs", "group_id": 2 }
+  },
+  "user": {
+    "alice":  { "id": 1, "username": "alice",  "password": "123456", "salt": "alic", "mobile": "13800000001", "email": "alice@test.local",  "group_id": 1, "status": "normal" },
+    "bob":    { "id": 2, "username": "bob",    "password": "123456", "salt": "bobs", "mobile": "13800000002", "email": "bob@test.local",    "group_id": 1, "status": "normal" },
+    "banned": { "id": 3, "username": "banned", "password": "123456", "salt": "bann", "mobile": "13800000003", "email": "banned@test.local", "group_id": 1, "status": "hidden" }
+  },
+  "auth_group": [
+    { "id": 1, "pid": 0, "name": "Admin group",        "rules": "*",                       "status": "normal" },
+    { "id": 2, "pid": 1, "name": "Test sub-admin",     "rules": "1,2,3,4,5,6,7,8,9,10",    "status": "normal" }
+  ],
+  "category": [
+    { "id": 100, "pid": 0, "type": "default",     "name": "test-cat-default-1", "nickname": "Default 1", "status": "normal", "weigh": 1 },
+    { "id": 101, "pid": 0, "type": "page",        "name": "test-cat-page-1",    "nickname": "Page 1",    "status": "normal", "weigh": 1 }
+  ]
+}

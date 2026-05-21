@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<title>{{ title|default('FastAdmin') }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="never">
+<link rel="shortcut icon" href="/assets/img/favicon.ico"/>
+<link href="/assets/css/frontend.css" rel="stylesheet">
+<script type="text/javascript">
+  var require = {
+    config: {{ requireConfig|raw }}
+  };
+</script>
+<!-- Sentry browser SDK (errors + session replay). See admin/common/meta.html. -->
+<script src="/assets/js/sentry-browser.bundle.js"></script>
+<script type="text/javascript">
+  if (window.__sentryInit && require.config && require.config.sentry) {
+    window.__sentryInit(require.config.sentry);
+  }
+</script>

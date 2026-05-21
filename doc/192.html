@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>方法 - FastAdmin框架文档 - FastAdmin开发文档</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="renderer" content="webkit">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="方法 - FastAdmin框架文档 - FastAdmin开发文档">
+        <meta property="og:description" content="">
+        <link rel="shortcut icon" href="_assets/static.fastadmin.net/assets/addons/docs/images/favicon.ico"/>
+
+        <!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+                <link href="_assets/static.fastadmin.net/assets/addons/docs/css/all.min.css" id="layuicss-layer" rel="stylesheet" type="text/css">
+                
+    </head>
+    <body class="page addon">
+        <script>document.body.className += (" " + document.cookie.match('(^|;)\\s*fatheme\\s*=\\s*([^;]+)')?.pop() + "-theme");</script>
+
+        <header id="header">
+    <div class="header-inner">
+        <button class="sidebar-toggle" id="btn-sidebar">☰</button>
+        <a href="index.html" class="logo">
+            <img src="_assets/static.fastadmin.net/assets/img/logo.svg" style="height:40px;">
+        </a>
+                <div class="app-selector">
+            <div class="app-name">
+                <a href="index.html" title="FastAdmin框架文档">FastAdmin框架文档</a>            </div>
+                    </div>
+                <div class="search-box">
+            <form id="search-form" action="https://www.fastadmin.net/search/result" method="get" target="_blank">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="keyword" id="search-query" placeholder="全站搜索" class="search-query local-search-input st-default-search-input">
+            </form>
+            <div class="local-search-result"></div>
+        </div>
+        <div class="header-nav">
+                        <a href="https://www.fastadmin.net" class="">首页</a>
+                        <a href="https://www.fastadmin.net/store.html" class="">插件市场</a>
+                        <a href="https://www.fastadmin.net/wxapp.html" class="">小程序</a>
+                        <a href="https://www.fastadmin.net/uniapp.html" class="">Uni-app</a>
+                        <a href="https://www.fastadmin.net/download.html" class="">下载</a>
+                        <a href="https://www.fastadmin.net/demo.html" class="">演示</a>
+                        <a href="index.html" class="">文档</a>
+                        <a href="https://ask.fastadmin.net" class="">问答</a>
+                        <a href="https://www.fastadmin.net/video.html" class="">视频</a>
+                        <a href="https://www.fastadmin.net/user/index.html" class="dropdown-toggle" data-toggle="dropdown">会员中心</a>
+        </div>
+        <div class="header-actions with-nav">
+                        <button class="nav-toggle" id="btn-mobile-nav" title="菜单">›</button>
+        </div>
+    </div>
+</header>
+
+        <!--@formatter:off-->
+<style>
+    </style>
+<!--@formatter:on-->
+<div id="main" class="fix-sidebar" data-url="https://www.fastadmin.net/developer/docs/name/doc/version/default">
+    <!-- Sidebar 侧边栏 -->
+    <aside id="sidebar">
+        <div class="sidebar-section">
+            <div class="my-4">
+                <input type="text" placeholder="搜索FastAdmin框架文档" class="search-input" data-name="doc" data-id="192" data-version="default">
+                            </div>
+                        <ul class="sidebar-nav">
+                <li class='  ' data-id='146' ><a href='index.html' class='sidebar-link '>介绍</a> </li><li class='  ' data-id='147' ><a href='install.html' class='sidebar-link '>安装</a> </li><li class='  ' data-id='1589' ><a href='1589.html' class='sidebar-link '>快速开始</a> </li><li class='  ' data-id='150' ><a href='construct.html' class='sidebar-link '>架构</a> </li><li class='haschild collapsed  ' data-id='2461' ><em></em><a href='2461.html' class='sidebar-link '>配置</a> <ul ><li class='  ' data-id='2483' ><a href='2483.html' class='sidebar-link '>框架 env 变量配置</a> </li><li class='  ' data-id='2484' ><a href='2484.html' class='sidebar-link '>框架默认配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='154' ><em></em><a href='module.html' class='sidebar-link '>模块</a> <ul ><li class='  ' data-id='168' ><a href='168.html' class='sidebar-link '>后台模块</a> </li><li class='  ' data-id='166' ><a href='166.html' class='sidebar-link '>前台模块</a> </li><li class='  ' data-id='167' ><a href='167.html' class='sidebar-link '>API 模块</a> </li><li class='  ' data-id='169' ><a href='169.html' class='sidebar-link '>公共模块</a> </li></ul></li><li class='haschild collapsed  ' data-id='148' ><em></em><a href='command.html' class='sidebar-link '>命令行</a> <ul ><li class='  ' data-id='160' ><a href='crud.html' class='sidebar-link '>一键生成CRUD</a> </li><li class='  ' data-id='161' ><a href='161.html' class='sidebar-link '>一键生成菜单</a> </li><li class='  ' data-id='162' ><a href='162.html' class='sidebar-link '>一键压缩打包</a> </li><li class='  ' data-id='163' ><a href='163.html' class='sidebar-link '>一键生成API文档</a> </li><li class='  ' data-id='164' ><a href='164.html' class='sidebar-link '>一键管理插件</a> </li><li class='  ' data-id='165' ><a href='165.html' class='sidebar-link '>其他命令</a> </li></ul></li><li class='  ' data-id='151' ><a href='language.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='152' ><a href='database.html' class='sidebar-link '>数据库</a> </li><li class='  ' data-id='153' ><a href='controller.html' class='sidebar-link '>控制器</a> </li><li class='  ' data-id='155' ><a href='frontend.html' class='sidebar-link '>前端</a> </li><li class='haschild collapsed  ' data-id='156' ><em></em><a href='component.html' class='sidebar-link '>组件</a> <ul ><li class='  ' data-id='177' ><a href='177.html' class='sidebar-link '>文件上传</a> </li><li class='  ' data-id='178' ><a href='178.html' class='sidebar-link '>动态下拉(SelectPage)</a> </li><li class='  ' data-id='179' ><a href='179.html' class='sidebar-link '>表单验证</a> </li><li class='  ' data-id='180' ><a href='180.html' class='sidebar-link '>城市选择</a> </li><li class='  ' data-id='181' ><a href='181.html' class='sidebar-link '>日期时间</a> </li><li class='  ' data-id='182' ><a href='182.html' class='sidebar-link '>下拉列表</a> </li><li class='  ' data-id='183' ><a href='183.html' class='sidebar-link '>附件选择</a> </li><li class='  ' data-id='184' ><a href='184.html' class='sidebar-link '>键值组件(Fieldlist)</a> </li><li class='  ' data-id='185' ><a href='185.html' class='sidebar-link '>开关组件</a> </li><li class='  ' data-id='186' ><a href='186.html' class='sidebar-link '>滑块组件</a> </li><li class='  ' data-id='187' ><a href='187.html' class='sidebar-link '>富文本编辑器</a> </li><li class='  ' data-id='736' ><a href='736.html' class='sidebar-link '>日期时间区间</a> </li><li class='  ' data-id='1206' ><a href='1206.html' class='sidebar-link '>自动完成(Autocomplete)</a> </li><li class='  ' data-id='1207' ><a href='1207.html' class='sidebar-link '>标签输入</a> </li><li class='  ' data-id='1253' ><a href='1253.html' class='sidebar-link '>动态显示(Favisible)</a> </li></ul></li><li class='haschild expanded selected ' data-id='188' ><em></em><a href='table.html' class='sidebar-link current'>表格</a> <ul ><li class='  ' data-id='189' ><a href='189.html' class='sidebar-link '>实例化</a> </li><li class='  ' data-id='190' ><a href='190.html' class='sidebar-link '>表格参数</a> </li><li class='  ' data-id='191' ><a href='191.html' class='sidebar-link '>列参数</a> </li><li class=' selected ' data-id='192' ><a href='192.html' class='sidebar-link current'>方法</a> </li><li class='  ' data-id='193' ><a href='193.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='194' ><a href='194.html' class='sidebar-link '>事件</a> </li><li class='  ' data-id='195' ><a href='195.html' class='sidebar-link '>格式化</a> </li><li class='  ' data-id='196' ><a href='196.html' class='sidebar-link '>依赖</a> </li><li class='  ' data-id='197' ><a href='197.html' class='sidebar-link '>Table对象</a> </li></ul></li><li class='haschild collapsed  ' data-id='1262' ><em></em><a href='1262.html' class='sidebar-link '>扩展</a> <ul ><li class='  ' data-id='1263' ><a href='1263.html' class='sidebar-link '>函数</a> </li><li class='  ' data-id='1264' ><a href='1264.html' class='sidebar-link '>辅助类</a> </li></ul></li><li class='haschild collapsed  ' data-id='149' ><em></em><a href='addon.html' class='sidebar-link '>插件</a> <ul ><li class='  ' data-id='175' ><a href='175.html' class='sidebar-link '>插件市场</a> </li><li class='  ' data-id='173' ><a href='173.html' class='sidebar-link '>目录结构</a> </li><li class='  ' data-id='174' ><a href='174.html' class='sidebar-link '>行为事件</a> </li><li class='  ' data-id='176' ><a href='176.html' class='sidebar-link '>插件安装</a> </li><li class='  ' data-id='1864' ><a href='1864.html' class='sidebar-link '>插件配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='3886' ><em></em><a href='3886.html' class='sidebar-link '>安全建议</a> <ul ><li class='  ' data-id='157' ><a href='security.html' class='sidebar-link '>安全建议</a> </li><li class='  ' data-id='170' ><a href='170.html' class='sidebar-link '>代码安全</a> </li><li class='  ' data-id='171' ><a href='171.html' class='sidebar-link '>服务器安全</a> </li></ul></li><li class='  ' data-id='158' ><a href='faq.html' class='sidebar-link '>常见问题</a> </li><li class='haschild collapsed  ' data-id='159' ><em></em><a href='contributing.html' class='sidebar-link '>参与开源生态贡献</a> <ul ><li class='  ' data-id='2482' ><a href='2482.html' class='sidebar-link '>贡献代码</a> </li></ul></li><li class='  ' data-id='1452' ><a href='1452.html' class='sidebar-link '>参考文档列表</a> </li>            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb" style="display:none;">
+        <a href="index.html">首页</a> <span class="sep">/</span>
+        <a href="#">安装部署</a> <span class="sep">/</span>
+        <span class="current">升级</span>
+    </div>
+
+    <!-- 文档头部信息 -->
+    <div class="doc-header">
+                <h1 data-id="192" data-eid="V4v5">方法</h1>
+                <div class="doc-meta">
+            <span class="meta-item">更新于: 2025-06-23 16:20:10</span>
+            <span class="meta-item">文档著作权归开发者所有，未经许可，禁止转载、复制此文档的任何内容。</span>
+        </div>
+
+        <span class="doc-operation">
+                    </span>
+    </div>
+    <div class="article-content">
+    <p>使用方法的语法：<code>$('#table').bootstrapTable('method', parameter);</code>。</p><table  class="table table-responsive">
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>参数</th>
+        <th>描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>getOptions</td>
+        <td>none</td>
+        <td>返回表格的 Options。</td>
+    </tr>
+    <tr>
+        <td>getSelections</td>
+        <td>none</td>
+        <td>返回所选的行，当没有选择任何行的时候返回一个空数组。</td>
+    </tr>
+    <tr>
+        <td>getAllSelections</td>
+        <td>none</td>
+        <td>返回所有选择的行，包括搜索过滤前的，当没有选择任何行的时候返回一个空数组。</td>
+    </tr>
+    <tr>
+        <td>getData</td>
+        <td>useCurrentPage</td>
+        <td>获取当前加载的数据。假如设置 useCurrentPage 为 true，则返回当前页的数据。</td>
+    </tr>
+    <tr>
+        <td>getRowByUniqueId</td>
+        <td>id</td>
+        <td>根据 uniqueId 获取行数据。</td>
+    </tr>
+    <tr>
+        <td>load</td>
+        <td>data</td>
+        <td>加载数据到表格中，旧数据会被替换。</td>
+    </tr>
+    <tr>
+        <td>showAllColumns</td>
+        <td>none</td>
+        <td>显示所有列。</td>
+    </tr>
+    <tr>
+        <td>hideAllColumns</td>
+        <td>none</td>
+        <td>隐藏所有列。</td>
+    </tr>
+    <tr>
+        <td>append</td>
+        <td>data</td>
+        <td>添加数据到表格在现有数据之后。</td>
+    </tr>
+    <tr>
+        <td>prepend</td>
+        <td>data</td>
+        <td>插入数据到表格在现有数据之前。</td>
+    </tr>
+    <tr>
+        <td>remove</td>
+        <td>params</td>
+        <td>
+        从表格中删除数据，包括两个参数：
+        field: 需要删除的行的 field 名称，<br>
+        values: 需要删除的行的值，类型为数组。<br>
+        </td>
+    </tr>
+    <tr>
+        <td>removeAll</td>
+        <td>-</td>
+        <td>删除表格所有数据。</td>
+    </tr>
+    <tr>
+        <td>removeByUniqueId</td>
+        <td>id</td>
+        <td>根据 uniqueId 删除指定的行。</td>
+    </tr>
+    <tr>
+        <td>insertRow</td>
+        <td>params</td>
+        <td>
+        插入新行，参数包括：<br>
+        index: 要插入的行的 index，<br>
+        row: 行的数据，Object 对象。
+        </td>
+    </tr>
+    <tr>
+        <td>updateRow</td>
+        <td>params</td>
+        <td>
+        更新指定的行，参数包括：<br>
+        index: 要更新的行的 index，<br>
+        row: 行的数据，Object 对象。
+        </td>
+    </tr>
+    <tr>
+        <td>showRow</td>
+        <td>params</td>
+        <td>显示指定的行，参数包括：<br>
+        index: 要显示的行的 index 或者 uniqueId，<br>
+        isIdField: 指定 index 是否为 uniqueid。</td>
+    </tr>
+    <tr>
+        <td>hideRow</td>
+        <td>params</td>
+        <td>隐藏指定的行，参数包括：<br>
+        index: 要隐藏的行的 index，<br>
+        uniqueId: 或者要隐藏的行的 uniqueid。
+        </td>
+    </tr>
+    <tr>
+        <td>getHiddenRows</td>
+        <td>show</td>
+        <td>获取所有隐藏的行，如果show参数为true，行将再次显示，否则，只返回隐藏的行。</td>
+    </tr>
+    <tr>
+        <td>mergeCells</td>
+        <td>options</td>
+        <td>
+        将某些单元格合并到一个单元格，选项包含以下属性： <br>
+        index: 行索引，<br>
+        field: 字段名称，<br>
+        rowspan: 要合并的rowspan数量，<br>
+        colspan: 要合并的colspan数量。
+        </td>
+    </tr>
+    <tr>
+        <td>updateCell</td>
+        <td>params</td>
+        <td>
+        更新一个单元格，params包含以下属性：<br>
+        index: 行索引。<br>
+        field: 字段名称。<br>
+        value: 新字段值。
+        </td>
+    </tr>
+    <tr>
+        <td>refresh</td>
+        <td>params</td>
+        <td>刷新远程服务器数据，可以设置<code>{silent: true}</code>以静默方式刷新数据，并设置<code>{url: newUrl}</code>更改URL。 要提供特定于此请求的查询参数，请设置<code>{query: {foo: 'bar'}}</code>。</td>
+    </tr>
+    <tr>
+        <td>refreshOptions</td>
+        <td>options</td>
+        <td>刷新选项。</td>
+    </tr>
+    <tr>
+        <td>resetSearch</td>
+        <td>text</td>
+        <td>设置搜索文本。</td>
+    </tr>
+    <tr>
+        <td>showLoading</td>
+        <td>none</td>
+        <td>显示加载状态。</td>
+    </tr>
+    <tr>
+        <td>hideLoading</td>
+        <td>none</td>
+        <td>隐藏加载状态。</td>
+    </tr>
+    <tr>
+        <td>checkAll</td>
+        <td>none</td>
+        <td>选中当前页面所有行。</td>
+    </tr>
+    <tr>
+        <td>uncheckAll</td>
+        <td>none</td>
+        <td>取消选中当前页面所有行。</td>
+    </tr>
+    <tr>
+        <td>check</td>
+        <td>index</td>
+        <td>选中某一行，行索引从0开始。</td>
+    </tr>
+    <tr>
+        <td>uncheck</td>
+        <td>index</td>
+        <td>取消选中某一行，行索引从0开始。</td>
+    </tr>
+    <tr>
+        <td>checkBy</td>
+        <td>params</td>
+        <td>
+        按值或数组选中某行，参数包含：<br>
+        field: 用于查找记录的字段的名称，<br>
+        values: 要检查的行的值数组。<br>
+        例子: <br>
+        $("#table").bootstrapTable("checkBy", {field:"field_name", values:["value1","value2","value3"]})
+        </td>
+    </tr>
+    <tr>
+        <td>uncheckBy</td>
+        <td>params</td>
+        <td>
+        按值数组取消选中某行，参数包含：<br>
+        field: 用于查找记录的字段的名称，<br>
+        values: 要检查的行的值数组。<br>
+        例子: <br>
+        $("#table").bootstrapTable("uncheckBy", {field:"field_name", values:["value1","value2","value3"]})
+        </td>
+    </tr>
+    <tr>
+        <td>resetView</td>
+        <td>params</td>
+        <td>重置引导表视图，例如重置表高度。</td>
+    </tr>
+    <tr>
+        <td>resetWidth</td>
+        <td>none</td>
+        <td>调整页眉和页脚的大小以适合当前列宽度。</td>
+    </tr>
+    <tr>
+        <td>destroy</td>
+        <td>none</td>
+        <td>销毁表。</td>
+    </tr>
+    <tr>
+        <td>showColumn</td>
+        <td>field</td>
+        <td>显示指定的列。</td>
+    </tr>
+    <tr>
+        <td>hideColumn</td>
+        <td>field</td>
+        <td>隐藏指定的列。</td>
+    </tr>
+    <tr>
+        <td>getHiddenColumns</td>
+        <td>-</td>
+        <td>获取隐藏的列。</td>
+    </tr>
+    <tr>
+        <td>getVisibleColumns</td>
+        <td>-</td>
+        <td>获取可见列。</td>
+    </tr>
+    <tr>
+        <td>scrollTo</td>
+        <td>value</td>
+        <td>滚动到指定位置，单位为 px，设置 'bottom' 表示跳到最后。</td>
+    </tr>
+    <tr>
+        <td>getScrollPosition</td>
+        <td>none</td>
+        <td>获取当前滚动条的位置，单位为 px。</td>
+    </tr>
+    <tr>
+        <td>filterBy</td>
+        <td>params</td>
+        <td>（只能用于 client 端）过滤表格数据， 你可以通过过滤<code>{age: 10}</code>来显示 age 等于 10 的数据。</td>
+    </tr>
+    <tr>
+        <td>selectPage</td>
+        <td>page</td>
+        <td>跳到指定的页。</td>
+    </tr>
+    <tr>
+        <td>prevPage</td>
+        <td>none</td>
+        <td>跳到上一页。</td>
+    </tr>
+    <tr>
+        <td>nextPage</td>
+        <td>none</td>
+        <td>跳到下一页。</td>
+    </tr>
+    <tr>
+        <td>togglePagination</td>
+        <td>none</td>
+        <td>切换分页选项。</td>
+    </tr>
+    <tr>
+        <td>toggleView</td>
+        <td>none</td>
+        <td>切换 card/table 视图</td>
+    </tr>
+    <tr>
+        <td>expandRow</td>
+        <td>index</td>
+        <td>如果详细视图选项设置为True，可展开索引为 index 的行。</td>
+    </tr>
+    <tr>
+        <td>collapseRow</td>
+        <td>index</td>
+        <td>如果详细视图选项设置为True，可收起索引为 index 的行。.</td>
+    </tr>
+    <tr>
+        <td>expandAllRows</td>
+        <td>none</td>
+        <td>如果详细视图选项设置为True，可展开所有行。</td>
+    </tr>
+    <tr>
+        <td>collapseAllRows</td>
+        <td>none</td>
+        <td>如果详细视图选项设置为True，可收起开所有行。</td>
+    </tr>
+    </tbody>
+</table>    </div>
+
+        <div class="doc-links">
+        <!--@formatter:off-->
+                    <span>
+                                ← <a href="191.html" data-id="191">列参数</a>
+                            </span>
+            <span>
+                                <a href="193.html" data-id="193">多语言</a> →
+                            </span>
+                <!--@formatter:on-->
+    </div>
+    
+    <div class="docs-footer">
+        <!--@formatter:off-->
+                    未解决你的问题？请到「<a href="https://ask.fastadmin.net" target="_blank">问答社区</a>」反馈你遇到的问题
+                    <!--@formatter:on-->
+    </div>
+
+    
+</main>
+
+
+    <aside id="toc" class="toc"></aside>
+
+</div>
+
+<div class="floatbar" id="floatbar" style="margin-top: -360px;">
+        <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-toc">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/toc.svg" />
+            </i>
+            <p>
+                文档<br>
+                目录
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-theme">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/theme.svg" />
+            </i>
+            <p>
+                深色<br>
+                模式
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn backtotop" style="display:none;">
+            <i class="fa">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/backtotop.svg" />
+            </i>
+            <p>
+                回到<br>
+                顶部
+            </p>
+        </a>
+    </div>
+</div>
+
+
+        
+
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">
+            Copyright © 2017~2026 <a href="https://www.fastadmin.net">FastAdmin</a> All Rights Reserved
+            <a href="https://www.fastadmin.net/news/69.html">FastAdmin著作权</a>
+            <a href="https://www.fastadmin.net/page/yyzz.html" target="_blank">营业执照</a>
+            <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备15054802号-4</a><br>
+            深圳极速创想科技有限公司 版权所有 <br>未经许可，禁止转载、复制此文档的任何内容。
+        </div>
+</div>
+</footer>
+
+<!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+<script src="_assets/static.fastadmin.net/assets/addons/docs/js/all.min.js"></script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "example",
+  "title": "Example Addon",
+  "description": "Reference implementation — demonstrates lifecycle + hooks.",
+  "version": "1.0.0",
+  "state": 1,
+  "author": "fastadmin-ts",
+  "hooks": {
+    "user_login_successed": "onUserLogin"
+  }
+}

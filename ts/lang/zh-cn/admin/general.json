@@ -1,0 +1,19 @@
+{
+  "General": "常规管理",
+  "Config": "系统配置",
+  "Attachment": "附件管理",
+  "Profile": "个人资料",
+  "Site name": "站点名称",
+  "Cdn url": "CDN 地址",
+  "Version": "版本号",
+  "Timezone": "时区",
+  "Forbidden ip": "禁止访问 IP",
+  "Languages": "语言",
+  "Fixed page": "固定页面",
+  "Name already exist": "该变量名已存在",
+  "Only work at development environment": "仅在开发环境可用",
+  "This is a test mail": "测试邮件",
+  "This is a test mail content": "这是一封测试邮件 - %s",
+  "Send mail failed": "邮件发送失败",
+  "File extension is not allowed": "不允许的文件扩展名"
+}

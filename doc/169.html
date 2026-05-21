@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>公共模块 - FastAdmin框架文档 - FastAdmin开发文档</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="renderer" content="webkit">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="公共模块 - FastAdmin框架文档 - FastAdmin开发文档">
+        <meta property="og:description" content="">
+        <link rel="shortcut icon" href="_assets/static.fastadmin.net/assets/addons/docs/images/favicon.ico"/>
+
+        <!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+                <link href="_assets/static.fastadmin.net/assets/addons/docs/css/all.min.css" id="layuicss-layer" rel="stylesheet" type="text/css">
+                
+    </head>
+    <body class="page addon">
+        <script>document.body.className += (" " + document.cookie.match('(^|;)\\s*fatheme\\s*=\\s*([^;]+)')?.pop() + "-theme");</script>
+
+        <header id="header">
+    <div class="header-inner">
+        <button class="sidebar-toggle" id="btn-sidebar">☰</button>
+        <a href="index.html" class="logo">
+            <img src="_assets/static.fastadmin.net/assets/img/logo.svg" style="height:40px;">
+        </a>
+                <div class="app-selector">
+            <div class="app-name">
+                <a href="index.html" title="FastAdmin框架文档">FastAdmin框架文档</a>            </div>
+                    </div>
+                <div class="search-box">
+            <form id="search-form" action="https://www.fastadmin.net/search/result" method="get" target="_blank">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="keyword" id="search-query" placeholder="全站搜索" class="search-query local-search-input st-default-search-input">
+            </form>
+            <div class="local-search-result"></div>
+        </div>
+        <div class="header-nav">
+                        <a href="https://www.fastadmin.net" class="">首页</a>
+                        <a href="https://www.fastadmin.net/store.html" class="">插件市场</a>
+                        <a href="https://www.fastadmin.net/wxapp.html" class="">小程序</a>
+                        <a href="https://www.fastadmin.net/uniapp.html" class="">Uni-app</a>
+                        <a href="https://www.fastadmin.net/download.html" class="">下载</a>
+                        <a href="https://www.fastadmin.net/demo.html" class="">演示</a>
+                        <a href="index.html" class="">文档</a>
+                        <a href="https://ask.fastadmin.net" class="">问答</a>
+                        <a href="https://www.fastadmin.net/video.html" class="">视频</a>
+                        <a href="https://www.fastadmin.net/user/index.html" class="dropdown-toggle" data-toggle="dropdown">会员中心</a>
+        </div>
+        <div class="header-actions with-nav">
+                        <button class="nav-toggle" id="btn-mobile-nav" title="菜单">›</button>
+        </div>
+    </div>
+</header>
+
+        <!--@formatter:off-->
+<style>
+    </style>
+<!--@formatter:on-->
+<div id="main" class="fix-sidebar" data-url="https://www.fastadmin.net/developer/docs/name/doc/version/default">
+    <!-- Sidebar 侧边栏 -->
+    <aside id="sidebar">
+        <div class="sidebar-section">
+            <div class="my-4">
+                <input type="text" placeholder="搜索FastAdmin框架文档" class="search-input" data-name="doc" data-id="169" data-version="default">
+                            </div>
+                        <ul class="sidebar-nav">
+                <li class='  ' data-id='146' ><a href='index.html' class='sidebar-link '>介绍</a> </li><li class='  ' data-id='147' ><a href='install.html' class='sidebar-link '>安装</a> </li><li class='  ' data-id='1589' ><a href='1589.html' class='sidebar-link '>快速开始</a> </li><li class='  ' data-id='150' ><a href='construct.html' class='sidebar-link '>架构</a> </li><li class='haschild collapsed  ' data-id='2461' ><em></em><a href='2461.html' class='sidebar-link '>配置</a> <ul ><li class='  ' data-id='2483' ><a href='2483.html' class='sidebar-link '>框架 env 变量配置</a> </li><li class='  ' data-id='2484' ><a href='2484.html' class='sidebar-link '>框架默认配置</a> </li></ul></li><li class='haschild expanded selected ' data-id='154' ><em></em><a href='module.html' class='sidebar-link current'>模块</a> <ul ><li class='  ' data-id='168' ><a href='168.html' class='sidebar-link '>后台模块</a> </li><li class='  ' data-id='166' ><a href='166.html' class='sidebar-link '>前台模块</a> </li><li class='  ' data-id='167' ><a href='167.html' class='sidebar-link '>API 模块</a> </li><li class=' selected ' data-id='169' ><a href='169.html' class='sidebar-link current'>公共模块</a> </li></ul></li><li class='haschild collapsed  ' data-id='148' ><em></em><a href='command.html' class='sidebar-link '>命令行</a> <ul ><li class='  ' data-id='160' ><a href='crud.html' class='sidebar-link '>一键生成CRUD</a> </li><li class='  ' data-id='161' ><a href='161.html' class='sidebar-link '>一键生成菜单</a> </li><li class='  ' data-id='162' ><a href='162.html' class='sidebar-link '>一键压缩打包</a> </li><li class='  ' data-id='163' ><a href='163.html' class='sidebar-link '>一键生成API文档</a> </li><li class='  ' data-id='164' ><a href='164.html' class='sidebar-link '>一键管理插件</a> </li><li class='  ' data-id='165' ><a href='165.html' class='sidebar-link '>其他命令</a> </li></ul></li><li class='  ' data-id='151' ><a href='language.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='152' ><a href='database.html' class='sidebar-link '>数据库</a> </li><li class='  ' data-id='153' ><a href='controller.html' class='sidebar-link '>控制器</a> </li><li class='  ' data-id='155' ><a href='frontend.html' class='sidebar-link '>前端</a> </li><li class='haschild collapsed  ' data-id='156' ><em></em><a href='component.html' class='sidebar-link '>组件</a> <ul ><li class='  ' data-id='177' ><a href='177.html' class='sidebar-link '>文件上传</a> </li><li class='  ' data-id='178' ><a href='178.html' class='sidebar-link '>动态下拉(SelectPage)</a> </li><li class='  ' data-id='179' ><a href='179.html' class='sidebar-link '>表单验证</a> </li><li class='  ' data-id='180' ><a href='180.html' class='sidebar-link '>城市选择</a> </li><li class='  ' data-id='181' ><a href='181.html' class='sidebar-link '>日期时间</a> </li><li class='  ' data-id='182' ><a href='182.html' class='sidebar-link '>下拉列表</a> </li><li class='  ' data-id='183' ><a href='183.html' class='sidebar-link '>附件选择</a> </li><li class='  ' data-id='184' ><a href='184.html' class='sidebar-link '>键值组件(Fieldlist)</a> </li><li class='  ' data-id='185' ><a href='185.html' class='sidebar-link '>开关组件</a> </li><li class='  ' data-id='186' ><a href='186.html' class='sidebar-link '>滑块组件</a> </li><li class='  ' data-id='187' ><a href='187.html' class='sidebar-link '>富文本编辑器</a> </li><li class='  ' data-id='736' ><a href='736.html' class='sidebar-link '>日期时间区间</a> </li><li class='  ' data-id='1206' ><a href='1206.html' class='sidebar-link '>自动完成(Autocomplete)</a> </li><li class='  ' data-id='1207' ><a href='1207.html' class='sidebar-link '>标签输入</a> </li><li class='  ' data-id='1253' ><a href='1253.html' class='sidebar-link '>动态显示(Favisible)</a> </li></ul></li><li class='haschild collapsed  ' data-id='188' ><em></em><a href='table.html' class='sidebar-link '>表格</a> <ul ><li class='  ' data-id='189' ><a href='189.html' class='sidebar-link '>实例化</a> </li><li class='  ' data-id='190' ><a href='190.html' class='sidebar-link '>表格参数</a> </li><li class='  ' data-id='191' ><a href='191.html' class='sidebar-link '>列参数</a> </li><li class='  ' data-id='192' ><a href='192.html' class='sidebar-link '>方法</a> </li><li class='  ' data-id='193' ><a href='193.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='194' ><a href='194.html' class='sidebar-link '>事件</a> </li><li class='  ' data-id='195' ><a href='195.html' class='sidebar-link '>格式化</a> </li><li class='  ' data-id='196' ><a href='196.html' class='sidebar-link '>依赖</a> </li><li class='  ' data-id='197' ><a href='197.html' class='sidebar-link '>Table对象</a> </li></ul></li><li class='haschild collapsed  ' data-id='1262' ><em></em><a href='1262.html' class='sidebar-link '>扩展</a> <ul ><li class='  ' data-id='1263' ><a href='1263.html' class='sidebar-link '>函数</a> </li><li class='  ' data-id='1264' ><a href='1264.html' class='sidebar-link '>辅助类</a> </li></ul></li><li class='haschild collapsed  ' data-id='149' ><em></em><a href='addon.html' class='sidebar-link '>插件</a> <ul ><li class='  ' data-id='175' ><a href='175.html' class='sidebar-link '>插件市场</a> </li><li class='  ' data-id='173' ><a href='173.html' class='sidebar-link '>目录结构</a> </li><li class='  ' data-id='174' ><a href='174.html' class='sidebar-link '>行为事件</a> </li><li class='  ' data-id='176' ><a href='176.html' class='sidebar-link '>插件安装</a> </li><li class='  ' data-id='1864' ><a href='1864.html' class='sidebar-link '>插件配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='3886' ><em></em><a href='3886.html' class='sidebar-link '>安全建议</a> <ul ><li class='  ' data-id='157' ><a href='security.html' class='sidebar-link '>安全建议</a> </li><li class='  ' data-id='170' ><a href='170.html' class='sidebar-link '>代码安全</a> </li><li class='  ' data-id='171' ><a href='171.html' class='sidebar-link '>服务器安全</a> </li></ul></li><li class='  ' data-id='158' ><a href='faq.html' class='sidebar-link '>常见问题</a> </li><li class='haschild collapsed  ' data-id='159' ><em></em><a href='contributing.html' class='sidebar-link '>参与开源生态贡献</a> <ul ><li class='  ' data-id='2482' ><a href='2482.html' class='sidebar-link '>贡献代码</a> </li></ul></li><li class='  ' data-id='1452' ><a href='1452.html' class='sidebar-link '>参考文档列表</a> </li>            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb" style="display:none;">
+        <a href="index.html">首页</a> <span class="sep">/</span>
+        <a href="#">安装部署</a> <span class="sep">/</span>
+        <span class="current">升级</span>
+    </div>
+
+    <!-- 文档头部信息 -->
+    <div class="doc-header">
+                <h1 data-id="169" data-eid="V4v5">公共模块</h1>
+                <div class="doc-meta">
+            <span class="meta-item">更新于: 2023-12-14 21:54:10</span>
+            <span class="meta-item">文档著作权归开发者所有，未经许可，禁止转载、复制此文档的任何内容。</span>
+        </div>
+
+        <span class="doc-operation">
+                    </span>
+    </div>
+    <div class="article-content">
+    <h2 id="Token验证-1">Token验证</h2><h3 id="功能介绍-1">功能介绍</h3><p>Token验证主要用于会员登录状态信息的维护和验证，通常情况下不需要我们调用此类的方法，在一些特殊情况下我们可以手动调用。</p><h3 id="使用示例-2">使用示例</h3><h5 id="获取Token信息-1">获取Token信息</h5><p>获取Token的详情、关联的会员ID、过期时间、有效期等信息。</p><pre title=""><code class="language-php">\app\common\library\Token::get('c2259a37-5fee-4c4b-93b0-1d7313e1d1ac');</code></pre><h5 id="设置会员的Token信息-2">设置会员的Token信息</h5><p>新增会员Token并更新，且有效期为3600秒</p><pre title=""><code class="language-php">\app\common\library\Token::set('c2259a37-5fee-4c4b-93b0-1d7313e1d1ac', 1, 3600);</code></pre><h5 id="判断会员Token是否可用-3">判断会员Token是否可用</h5><p>通过Token和会员ID来判断Token是否可以使用。</p><pre title=""><code>\app\common\library\Token::check('c2259a37-5fee-4c4b-93b0-1d7313e1d1ac', 1);</code></pre><h5 id="删除单个会员Token-4">删除单个会员Token</h5><p>删除指定的Token。</p><pre title=""><code class="language-php">\app\common\library\Token::delete('c2259a37-5fee-4c4b-93b0-1d7313e1d1ac');</code></pre><h5 id="删除指定会员的所有Token-5">删除指定会员的所有Token</h5><p>删除会员ID为1的所有Token。</p><pre title=""><code class="language-php">\app\common\library\Token::clear(1);</code></pre><h2 id="邮件发送-2">邮件发送</h2><h3 id="功能介绍-3">功能介绍</h3><p>FastAdmin中的邮件发送采用<code>phpmailer</code>进行邮件发送，在使用邮件发送功能前请先在后台常规管理-&gt;系统配置中配置好邮件的相关信息。</p><h3 id="使用示例-4">使用示例</h3><p>首先我们需要采用单例或实例化一个<code>Email</code>对象</p><pre title=""><code class="language-php">$email = new \app\common\library\Email;</code></pre><p>其次我们可以设置邮件主题正文、接收者、标题等信息，比如</p><pre title=""><code class="language-php">$email-&gt;subject('这里是邮件标题')-&gt;to('youremail@163.com')-&gt;message('这里是邮件正文')-&gt;send();</code></pre><p>如果我们邮件发送失败，想获取错误的详情，可使用。</p><pre title=""><code class="language-php">$email-&gt;getError();</code></pre><p>来获取到错误详情</p><h2 id="短信发送-3">短信发送</h2><h3 id="功能介绍-5">功能介绍</h3><p>在我们开发过程中经常会用到短信发送和短信推广的功能，FastAdmin提供了一个简单实用的短信接口供开发者调用。</p><p>在使用短信发送之前，务必在后台安装好我们短信服务商的插件，如果我们要使用的服务商未提供有FastAdmin的插件，我们则需要自己开发一个，或注册一个<code>sms_send</code>和<code>sms_check</code>的事件用于我们的发送和检测操作。</p><h3 id="使用示例-6">使用示例</h3><p>首先常用的是发送短信，比如我们发送一个注册验证码。</p><pre title=""><code class="language-php">\app\common\library\Sms::send('13888888888', '1234', 'register');</code></pre><p>发送以后我们有时需要检测验证码是否正确，则可以使用。</p><pre title=""><code class="language-php">\app\common\library\Sms::check('1388888888', '1234', 'register');</code></pre><p>当然有些时候我们还需要发送营销短信或通知，则可以使用。</p><pre title=""><code class="language-php">\app\common\library\Sms::notice('1388888888', '消息内容', 'SMS_10001');</code></pre><p>如果我们需要清空指定手机号的验证码，则可以使用。</p><pre title=""><code class="language-php">\app\common\library\Sms::flush('13888888888', 'register');</code></pre><h2 id="辅助函数-4">辅助函数</h2><p>在FastAdmin中我们有提供几个常用的辅助函数。</p><pre title=""><code class="language-php">
+/**
+ * 获取语言变量值
+ * @param string    $name 语言变量名
+ * @param array     $vars 动态变量值
+ * @param string    $lang 语言
+ * @return mixed
+ */
+function __($name, $vars = [], $lang = '')
+{
+}
+
+/**
+ * 将字节转换为可读文本
+ * @param int $size 大小
+ * @param string $delimiter 分隔符
+ * @return string
+ */
+function format_bytes($size, $delimiter = '')
+{
+}
+
+/**
+ * 将时间戳转换为日期时间
+ * @param int $time 时间戳
+ * @param string $format 日期时间格式
+ * @return string
+ */
+function datetime($time, $format = 'Y-m-d H:i:s')
+{
+}
+
+/**
+ * 获取语义化时间
+ * @param int $time 时间
+ * @param int $local 本地时间
+ * @return string
+ */
+function human_date($time, $local = null)
+{
+}
+
+/**
+ * 获取上传资源的CDN的地址
+ * @param string $url 资源相对地址
+ * @return string
+ */
+function cdnurl($url)
+{
+}
+
+/**
+ * 判断文件或文件夹是否可写
+ * @param   string $file 文件或目录
+ * @return  bool
+ */
+function is_really_writable($file)
+{
+}
+/**
+ * 删除文件夹
+ * @param string $dirname 目录
+ * @param bool $withself 是否删除自身
+ * @return boolean
+ */
+function rmdirs($dirname, $withself = true)
+{
+}
+
+/**
+ * 复制文件夹
+ * @param string $source 源文件夹
+ * @param string $dest 目标文件夹
+ */
+function copydirs($source, $dest)
+{
+}
+
+function mb_ucfirst($string)
+{
+}
+
+/**
+ * 附加关联字段数据
+ * @param array $items 数据列表
+ * @param mixed $fields 渲染的来源字段
+ * @return array
+ */
+function addtion($items, $fields)
+{
+}
+
+/**
+ * 返回打印数组结构
+ * @param string $var   数组
+ * @param string $indent 缩进字符
+ * @return string
+ */
+function var_export_short($var, $indent = &quot;&quot;)
+{
+}</code></pre>    </div>
+
+        <div class="doc-links">
+        <!--@formatter:off-->
+                    <span>
+                                ← <a href="167.html" data-id="167">API 模块</a>
+                            </span>
+            <span>
+                                <a href="command.html" data-id="148">命令行</a> →
+                            </span>
+                <!--@formatter:on-->
+    </div>
+    
+    <div class="docs-footer">
+        <!--@formatter:off-->
+                    未解决你的问题？请到「<a href="https://ask.fastadmin.net" target="_blank">问答社区</a>」反馈你遇到的问题
+                    <!--@formatter:on-->
+    </div>
+
+    
+</main>
+
+
+    <aside id="toc" class="toc"></aside>
+
+</div>
+
+<div class="floatbar" id="floatbar" style="margin-top: -360px;">
+        <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-toc">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/toc.svg" />
+            </i>
+            <p>
+                文档<br>
+                目录
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-theme">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/theme.svg" />
+            </i>
+            <p>
+                深色<br>
+                模式
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn backtotop" style="display:none;">
+            <i class="fa">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/backtotop.svg" />
+            </i>
+            <p>
+                回到<br>
+                顶部
+            </p>
+        </a>
+    </div>
+</div>
+
+
+        
+
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">
+            Copyright © 2017~2026 <a href="https://www.fastadmin.net">FastAdmin</a> All Rights Reserved
+            <a href="https://www.fastadmin.net/news/69.html">FastAdmin著作权</a>
+            <a href="https://www.fastadmin.net/page/yyzz.html" target="_blank">营业执照</a>
+            <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备15054802号-4</a><br>
+            深圳极速创想科技有限公司 版权所有 <br>未经许可，禁止转载、复制此文档的任何内容。
+        </div>
+</div>
+</footer>
+
+<!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+<script src="_assets/static.fastadmin.net/assets/addons/docs/js/all.min.js"></script>
+
+
+
+
+
+    </body>
+</html>

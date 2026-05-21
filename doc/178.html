@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>动态下拉(SelectPage) - FastAdmin框架文档 - FastAdmin开发文档</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="renderer" content="webkit">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="动态下拉(SelectPage) - FastAdmin框架文档 - FastAdmin开发文档">
+        <meta property="og:description" content="">
+        <link rel="shortcut icon" href="_assets/static.fastadmin.net/assets/addons/docs/images/favicon.ico"/>
+
+        <!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+                <link href="_assets/static.fastadmin.net/assets/addons/docs/css/all.min.css" id="layuicss-layer" rel="stylesheet" type="text/css">
+                
+    </head>
+    <body class="page addon">
+        <script>document.body.className += (" " + document.cookie.match('(^|;)\\s*fatheme\\s*=\\s*([^;]+)')?.pop() + "-theme");</script>
+
+        <header id="header">
+    <div class="header-inner">
+        <button class="sidebar-toggle" id="btn-sidebar">☰</button>
+        <a href="index.html" class="logo">
+            <img src="_assets/static.fastadmin.net/assets/img/logo.svg" style="height:40px;">
+        </a>
+                <div class="app-selector">
+            <div class="app-name">
+                <a href="index.html" title="FastAdmin框架文档">FastAdmin框架文档</a>            </div>
+                    </div>
+                <div class="search-box">
+            <form id="search-form" action="https://www.fastadmin.net/search/result" method="get" target="_blank">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="keyword" id="search-query" placeholder="全站搜索" class="search-query local-search-input st-default-search-input">
+            </form>
+            <div class="local-search-result"></div>
+        </div>
+        <div class="header-nav">
+                        <a href="https://www.fastadmin.net" class="">首页</a>
+                        <a href="https://www.fastadmin.net/store.html" class="">插件市场</a>
+                        <a href="https://www.fastadmin.net/wxapp.html" class="">小程序</a>
+                        <a href="https://www.fastadmin.net/uniapp.html" class="">Uni-app</a>
+                        <a href="https://www.fastadmin.net/download.html" class="">下载</a>
+                        <a href="https://www.fastadmin.net/demo.html" class="">演示</a>
+                        <a href="index.html" class="">文档</a>
+                        <a href="https://ask.fastadmin.net" class="">问答</a>
+                        <a href="https://www.fastadmin.net/video.html" class="">视频</a>
+                        <a href="https://www.fastadmin.net/user/index.html" class="dropdown-toggle" data-toggle="dropdown">会员中心</a>
+        </div>
+        <div class="header-actions with-nav">
+                        <button class="nav-toggle" id="btn-mobile-nav" title="菜单">›</button>
+        </div>
+    </div>
+</header>
+
+        <!--@formatter:off-->
+<style>
+    </style>
+<!--@formatter:on-->
+<div id="main" class="fix-sidebar" data-url="https://www.fastadmin.net/developer/docs/name/doc/version/default">
+    <!-- Sidebar 侧边栏 -->
+    <aside id="sidebar">
+        <div class="sidebar-section">
+            <div class="my-4">
+                <input type="text" placeholder="搜索FastAdmin框架文档" class="search-input" data-name="doc" data-id="178" data-version="default">
+                            </div>
+                        <ul class="sidebar-nav">
+                <li class='  ' data-id='146' ><a href='index.html' class='sidebar-link '>介绍</a> </li><li class='  ' data-id='147' ><a href='install.html' class='sidebar-link '>安装</a> </li><li class='  ' data-id='1589' ><a href='1589.html' class='sidebar-link '>快速开始</a> </li><li class='  ' data-id='150' ><a href='construct.html' class='sidebar-link '>架构</a> </li><li class='haschild collapsed  ' data-id='2461' ><em></em><a href='2461.html' class='sidebar-link '>配置</a> <ul ><li class='  ' data-id='2483' ><a href='2483.html' class='sidebar-link '>框架 env 变量配置</a> </li><li class='  ' data-id='2484' ><a href='2484.html' class='sidebar-link '>框架默认配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='154' ><em></em><a href='module.html' class='sidebar-link '>模块</a> <ul ><li class='  ' data-id='168' ><a href='168.html' class='sidebar-link '>后台模块</a> </li><li class='  ' data-id='166' ><a href='166.html' class='sidebar-link '>前台模块</a> </li><li class='  ' data-id='167' ><a href='167.html' class='sidebar-link '>API 模块</a> </li><li class='  ' data-id='169' ><a href='169.html' class='sidebar-link '>公共模块</a> </li></ul></li><li class='haschild collapsed  ' data-id='148' ><em></em><a href='command.html' class='sidebar-link '>命令行</a> <ul ><li class='  ' data-id='160' ><a href='crud.html' class='sidebar-link '>一键生成CRUD</a> </li><li class='  ' data-id='161' ><a href='161.html' class='sidebar-link '>一键生成菜单</a> </li><li class='  ' data-id='162' ><a href='162.html' class='sidebar-link '>一键压缩打包</a> </li><li class='  ' data-id='163' ><a href='163.html' class='sidebar-link '>一键生成API文档</a> </li><li class='  ' data-id='164' ><a href='164.html' class='sidebar-link '>一键管理插件</a> </li><li class='  ' data-id='165' ><a href='165.html' class='sidebar-link '>其他命令</a> </li></ul></li><li class='  ' data-id='151' ><a href='language.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='152' ><a href='database.html' class='sidebar-link '>数据库</a> </li><li class='  ' data-id='153' ><a href='controller.html' class='sidebar-link '>控制器</a> </li><li class='  ' data-id='155' ><a href='frontend.html' class='sidebar-link '>前端</a> </li><li class='haschild expanded selected ' data-id='156' ><em></em><a href='component.html' class='sidebar-link current'>组件</a> <ul ><li class='  ' data-id='177' ><a href='177.html' class='sidebar-link '>文件上传</a> </li><li class=' selected ' data-id='178' ><a href='178.html' class='sidebar-link current'>动态下拉(SelectPage)</a> </li><li class='  ' data-id='179' ><a href='179.html' class='sidebar-link '>表单验证</a> </li><li class='  ' data-id='180' ><a href='180.html' class='sidebar-link '>城市选择</a> </li><li class='  ' data-id='181' ><a href='181.html' class='sidebar-link '>日期时间</a> </li><li class='  ' data-id='182' ><a href='182.html' class='sidebar-link '>下拉列表</a> </li><li class='  ' data-id='183' ><a href='183.html' class='sidebar-link '>附件选择</a> </li><li class='  ' data-id='184' ><a href='184.html' class='sidebar-link '>键值组件(Fieldlist)</a> </li><li class='  ' data-id='185' ><a href='185.html' class='sidebar-link '>开关组件</a> </li><li class='  ' data-id='186' ><a href='186.html' class='sidebar-link '>滑块组件</a> </li><li class='  ' data-id='187' ><a href='187.html' class='sidebar-link '>富文本编辑器</a> </li><li class='  ' data-id='736' ><a href='736.html' class='sidebar-link '>日期时间区间</a> </li><li class='  ' data-id='1206' ><a href='1206.html' class='sidebar-link '>自动完成(Autocomplete)</a> </li><li class='  ' data-id='1207' ><a href='1207.html' class='sidebar-link '>标签输入</a> </li><li class='  ' data-id='1253' ><a href='1253.html' class='sidebar-link '>动态显示(Favisible)</a> </li></ul></li><li class='haschild collapsed  ' data-id='188' ><em></em><a href='table.html' class='sidebar-link '>表格</a> <ul ><li class='  ' data-id='189' ><a href='189.html' class='sidebar-link '>实例化</a> </li><li class='  ' data-id='190' ><a href='190.html' class='sidebar-link '>表格参数</a> </li><li class='  ' data-id='191' ><a href='191.html' class='sidebar-link '>列参数</a> </li><li class='  ' data-id='192' ><a href='192.html' class='sidebar-link '>方法</a> </li><li class='  ' data-id='193' ><a href='193.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='194' ><a href='194.html' class='sidebar-link '>事件</a> </li><li class='  ' data-id='195' ><a href='195.html' class='sidebar-link '>格式化</a> </li><li class='  ' data-id='196' ><a href='196.html' class='sidebar-link '>依赖</a> </li><li class='  ' data-id='197' ><a href='197.html' class='sidebar-link '>Table对象</a> </li></ul></li><li class='haschild collapsed  ' data-id='1262' ><em></em><a href='1262.html' class='sidebar-link '>扩展</a> <ul ><li class='  ' data-id='1263' ><a href='1263.html' class='sidebar-link '>函数</a> </li><li class='  ' data-id='1264' ><a href='1264.html' class='sidebar-link '>辅助类</a> </li></ul></li><li class='haschild collapsed  ' data-id='149' ><em></em><a href='addon.html' class='sidebar-link '>插件</a> <ul ><li class='  ' data-id='175' ><a href='175.html' class='sidebar-link '>插件市场</a> </li><li class='  ' data-id='173' ><a href='173.html' class='sidebar-link '>目录结构</a> </li><li class='  ' data-id='174' ><a href='174.html' class='sidebar-link '>行为事件</a> </li><li class='  ' data-id='176' ><a href='176.html' class='sidebar-link '>插件安装</a> </li><li class='  ' data-id='1864' ><a href='1864.html' class='sidebar-link '>插件配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='3886' ><em></em><a href='3886.html' class='sidebar-link '>安全建议</a> <ul ><li class='  ' data-id='157' ><a href='security.html' class='sidebar-link '>安全建议</a> </li><li class='  ' data-id='170' ><a href='170.html' class='sidebar-link '>代码安全</a> </li><li class='  ' data-id='171' ><a href='171.html' class='sidebar-link '>服务器安全</a> </li></ul></li><li class='  ' data-id='158' ><a href='faq.html' class='sidebar-link '>常见问题</a> </li><li class='haschild collapsed  ' data-id='159' ><em></em><a href='contributing.html' class='sidebar-link '>参与开源生态贡献</a> <ul ><li class='  ' data-id='2482' ><a href='2482.html' class='sidebar-link '>贡献代码</a> </li></ul></li><li class='  ' data-id='1452' ><a href='1452.html' class='sidebar-link '>参考文档列表</a> </li>            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb" style="display:none;">
+        <a href="index.html">首页</a> <span class="sep">/</span>
+        <a href="#">安装部署</a> <span class="sep">/</span>
+        <span class="current">升级</span>
+    </div>
+
+    <!-- 文档头部信息 -->
+    <div class="doc-header">
+                <h1 data-id="178" data-eid="V4v5">动态下拉(SelectPage)</h1>
+                <div class="doc-meta">
+            <span class="meta-item">更新于: 2025-11-04 14:49:41</span>
+            <span class="meta-item">文档著作权归开发者所有，未经许可，禁止转载、复制此文档的任何内容。</span>
+        </div>
+
+        <span class="doc-operation">
+                    </span>
+    </div>
+    <div class="article-content">
+    <p>FastAdmin中的动态下拉列表使用的是优秀强大的<code>Selectpage</code>插件，FastAdmin对其进行了二次开发。</p><h3 id="常规用法-1">常规用法</h3><p>下面介绍一个基础的动态下拉列表示例，如下</p><pre title=""><code class="language-html">&lt;input id=&quot;c-name&quot; data-rule=&quot;required&quot; data-source=&quot;category/selectpage&quot; class=&quot;form-control selectpage&quot; name=&quot;row[name]&quot; type=&quot;text&quot; value=&quot;&quot;&gt;</code></pre><p>其中需要给元素class添加一个<code>selectpage</code>，其次需要增加一个<code>data-source=&quot;category/selectpage&quot;</code>这个属性，<code>category/selectpage</code>为我们控制器提交列表的方法</p><p>FastAdmin的<code>Selectpage</code>列表中<code>显示字段</code>默认读取的是<code>name</code>字段，如果我们返回的列表中不包含<code>name</code>字段，将无法展现下拉列表数据。此时我们需要添加使用<code>data-field=&quot;你要显示的字段&quot;</code>即可，例如<code>data-field=&quot;title&quot;</code>。</p><p>FastAdmin的<code>Selectpage</code>列表中<code>主键字段</code>默认读取的是<code>id</code>字段，如果我们的主键不是<code>id</code>字段，则我们可以添加并使用<code>data-primary-key=&quot;你的主键ID字段&quot;</code>来修改,例如<code>data-primary-key=&quot;productid&quot;</code>。</p><h3 id="常用属性-2">常用属性</h3><table><thead><tr><th>属性                    </th><th>功能          </th><th>示例                                    </th></tr></thead><tbody><tr><td>data-source          </td><td>提供数据源的URL地址或JSON数据</td><td>data-source="category/index"          </td></tr><tr><td>data-field            </td><td>列表显示读取的字段  </td><td>data-field="username"                </td></tr><tr><td>data-search-field            </td><td>搜索的字段  </td><td>data-search-field="nickname,username"                </td></tr><tr><td>data-primary-key      </td><td>列表选中后渲染的字段  </td><td>data-primary-key="uid"                </td></tr><tr><td>data-pagination      </td><td>是否开启分页      </td><td>data-pagination="true"                </td></tr><tr><td>data-page-size        </td><td>分页大小        </td><td>data-page-size="10"                  </td></tr><tr><td>data-multiple        </td><td>是否支持多选      </td><td>data-multiple="true"                  </td></tr><tr><td>data-max-select-limit</td><td>最多可选择数量    </td><td>data-max-select-limit="3"            </td></tr><tr><td>data-order-by        </td><td>排序字段        </td><td>data-order-by="id"                    </td></tr><tr><td>data-params          </td><td>自定义扩展参数    </td><td>data-params='{"custom[type]":"test"}'</td></tr><tr><td>data-select-only      </td><td>是否为只读模式    </td><td>data-select-only="true"              </td></tr><tr><td>data-format-item      </td><td>列表行模板    </td><td>data-format-item="{title} - {author}"    </td></tr><tr><td>disabled      </td><td>禁用SelectPage组件    </td><td>disabled    </td></tr></tbody></table><h3 id="附加请求参数-3">附加请求参数</h3><p>如果需要简单的进行搜索筛选过滤，可以使用</p><pre title=""><code class="language-json">//筛选status为normal,type为1的数据
+data-params='{&quot;custom[status]&quot;:&quot;normal&quot;,&quot;custom[type]&quot;:&quot;1&quot;}'
+//筛选status为normal或hidden的数据，in为操作符，语法请参考文档：https://www.kancloud.cn/manual/thinkphp5/135182 
+data-params='{&quot;custom[status]&quot;:[&quot;in&quot;,&quot;normal,hidden&quot;]}'</code></pre><p><code>data-params</code>支持<code>function</code>类型,如果需要动态传参(例如联动查询),则可以在JS中将<code>data-params</code>添加一个<code>function</code>处理即可，请在表单初始化<code>Form.api.bindevent</code>之前使用，例如传递动态选择的类型</p><pre title=""><code class="language-js">$(&quot;#c-name&quot;).data(&quot;params&quot;, function (obj) {
+    //obj为SelectPage对象
+    return {custom: {type: $(&quot;#c-type&quot;).val()}};
+});</code></pre><h3 id="自定义行模板-4">自定义行模板</h3><p><code>SelectPage</code>的<code>data-format-item</code>在<code>1.2.0</code>之前的版本只支持使用JS赋值<code>function</code>来实现格式化模板功能，如：</p><pre title=""><code class="language-js">$(&quot;#c-category&quot;).data(&quot;format-item&quot;, function(row){
+    return row.title + &quot; - &quot; + row.author;
+});</code></pre><p>从FastAdmin<code>1.2.0</code>版本开始，同时还支持占位符和模板，如：<br>占位符模式</p><pre title=""><code class="language-html">&lt;input type=&quot;text&quot; ... data-format-item=&quot;{title} - {author}&quot; /&gt;</code></pre><p>模板模式</p><pre title=""><code class="language-html">&lt;input type=&quot;text&quot; ... data-format-item=&quot;#titletpl&quot; /&gt;
+
+&lt;script type=&quot;text/html&quot; id=&quot;titletpl&quot;&gt;
+&lt;%=title%&gt; - &lt;%=id%&gt;
+&lt;/script&gt;</code></pre><p><strong>温馨提示：</strong><br>默认由于<code>data-field=&quot;name&quot;</code>只能指定一个显示的字段，如果需要调用显示多个字段值时，必须在控制器指定</p><pre title=""><code class="language-php">protected $selectpageFields = &quot;id,name,title,author&quot;;</code></pre><h3 id="数据源-5">数据源</h3><p><code>data-source</code>支持<code>Object</code>和<code>远程URL返回</code>两种方式，如：</p><pre title=""><code class="language-html">data-source='[{&quot;id&quot;:&quot;1&quot;,&quot;title&quot;:&quot;标题1&quot;},{&quot;id&quot;:&quot;2&quot;,&quot;title&quot;:&quot;标题2&quot;}]'</code></pre><p>和</p><pre title=""><code class="language-html">data-source=&quot;category/index&quot;</code></pre><p>当使用远程数据源的方式时需要远程返回JSON数据，如：</p><pre title=""><code class="language-js">{
+    &quot;list&quot;:[{&quot;id&quot;:4,&quot;username&quot;:&quot;FastAdmin&quot;,&quot;nickname&quot;:&quot;快速后台&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;pid&quot;:0},{&quot;id&quot;:6,&quot;username&quot;:&quot;CRUD&quot;,&quot;nickname&quot;:&quot;一键CRUD&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;pid&quot;:0}],
+    &quot;total&quot;:30
+}</code></pre><p>其中<code>list</code>为数据列表,<code>total</code>为总记录数，总记录数将用于前端显示分页使用。</p><h3 id="事件监听-6">事件监听</h3><p>如果你需要对<code>SelectPage</code>组件值变更以后的事件进行监听，可以直接监听文本框的<code>change</code>事件即可，如：</p><pre title=""><code class="language-js">$(document).on(&quot;change&quot;, &quot;#c-title&quot;, function(){
+    //后续操作
+});</code></pre><p>也可使用</p><pre title=""><code class="language-js">$(&quot;#c-title&quot;).data(&quot;eSelect&quot;, function(data){
+    //后续操作
+});</code></pre><p><strong>更多事件</strong></p><table><thead><tr><th>事件名称</th><th>事件说明</th></tr></thead><tbody><tr><td>eSelect</td><td>选中后调用</td></tr><tr><td>eClear</td><td>点击清除后调用</td></tr><tr><td>eTagRemove</td><td>点击移除标签后(仅适用于多选)</td></tr></tbody></table><blockquote>注意以上代码需要放在元素组件初始化<code>Form.api.bindevent</code>之前。</blockquote><h3 id="常用方法-7">常用方法</h3><pre title=""><code>//刷新SelectPage
+$('#category_id').selectPageRefresh();
+//清除SelectPage数据
+$('#category_id').selectPageClear();
+//设置SelectPage数据
+$('#category_id').selectPageData(数据源);
+//禁用或启用SelectPage
+$('#category_id').selectPageDisabled(状态);
+//获取SelectPage的选中的文本
+$('#category_id').selectPageText();</code></pre><blockquote>注意以上代码必须在SelectPage组件渲染成功后才可以进行操作</blockquote><h3 id="常用示例-8">常用示例</h3><pre title=""><code>//动态修改SelectPage选中项
+$('#category_id').val(3);
+$('#category_id').selectPageRefresh();
+
+//设置SelectPage数据
+var data = [
+    {id:1 ,name:'分类一'},{id:2 ,name:'分类二'}
+];
+$('#category_id').selectPageData(data);
+
+//禁用
+$('#category_id').selectPageDisabled(true);
+//启用
+$('#category_id').selectPageDisabled(false);</code></pre><blockquote>注意以上代码必须在SelectPage组件渲染成功后才可以进行操作</blockquote><h3 id="常见问题-9">常见问题</h3><p>1、FastAdmin在生成CRUD时会对包含下划线的字段默认生成动态下拉列表，比如<code>user_id</code>将自动生成<code>data-source=&quot;user/index&quot;</code>，默认读取的是<code>id</code>和<code>name</code>字段，如果需要修改，请修改对应参数<code>data-primary-key</code>和<code>data-field</code>来重新赋值。<br>2、如果你在开发时遇到<code>SelectPage</code>组件在编辑时总是<code>返回第一行</code>或<code>返回所有行</code>的数据时，请参考以下文档进行检查你的代码：<br><a href="https://ask.fastadmin.net/article/2399.html">https://ask.fastadmin.net/article/2399.html</a> <br><a href="https://ask.fastadmin.net/article/2400.html">https://ask.fastadmin.net/article/2400.html</a> </p><p>更多的使用方法请参考<a href="https://www.fastadmin.net/outlink.html?url=https%3A%2F%2Fterryz.github.io%2Fselectpage%2Findex.html" rel="nofollow" target="_blank">Selectpage官方教程</a></p>    </div>
+
+        <div class="doc-links">
+        <!--@formatter:off-->
+                    <span>
+                                ← <a href="177.html" data-id="177">文件上传</a>
+                            </span>
+            <span>
+                                <a href="179.html" data-id="179">表单验证</a> →
+                            </span>
+                <!--@formatter:on-->
+    </div>
+    
+    <div class="docs-footer">
+        <!--@formatter:off-->
+                    未解决你的问题？请到「<a href="https://ask.fastadmin.net" target="_blank">问答社区</a>」反馈你遇到的问题
+                    <!--@formatter:on-->
+    </div>
+
+    
+</main>
+
+
+    <aside id="toc" class="toc"></aside>
+
+</div>
+
+<div class="floatbar" id="floatbar" style="margin-top: -360px;">
+        <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-toc">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/toc.svg" />
+            </i>
+            <p>
+                文档<br>
+                目录
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-theme">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/theme.svg" />
+            </i>
+            <p>
+                深色<br>
+                模式
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn backtotop" style="display:none;">
+            <i class="fa">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/backtotop.svg" />
+            </i>
+            <p>
+                回到<br>
+                顶部
+            </p>
+        </a>
+    </div>
+</div>
+
+
+        
+
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">
+            Copyright © 2017~2026 <a href="https://www.fastadmin.net">FastAdmin</a> All Rights Reserved
+            <a href="https://www.fastadmin.net/news/69.html">FastAdmin著作权</a>
+            <a href="https://www.fastadmin.net/page/yyzz.html" target="_blank">营业执照</a>
+            <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备15054802号-4</a><br>
+            深圳极速创想科技有限公司 版权所有 <br>未经许可，禁止转载、复制此文档的任何内容。
+        </div>
+</div>
+</footer>
+
+<!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+<script src="_assets/static.fastadmin.net/assets/addons/docs/js/all.min.js"></script>
+
+
+
+
+
+    </body>
+</html>

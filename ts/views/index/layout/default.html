@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> common/meta }}
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">FastAdmin</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      {{ __CONTENT__|raw }}
+    </div>
+    {{> common/script }}
+  </body>
+</html>

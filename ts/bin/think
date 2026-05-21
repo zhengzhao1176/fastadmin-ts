@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Thin POSIX wrapper around bin/think.ts so users can type
+#   ./bin/think install
+#   ./bin/think crud -t fa_news
+# instead of the full `node --import=@swc-node/register/esm-register ...` line.
+# Mirrors PHP's `php think <cmd>` ergonomics.
+set -euo pipefail
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec node --import="@swc-node/register/esm-register" "$DIR/think.ts" "$@"

@@ -1,0 +1,19 @@
+{
+  "General": "General",
+  "Config": "Config",
+  "Attachment": "Attachment",
+  "Profile": "Profile",
+  "Site name": "Site name",
+  "Cdn url": "CDN URL",
+  "Version": "Version",
+  "Timezone": "Timezone",
+  "Forbidden ip": "Forbidden IPs",
+  "Languages": "Languages",
+  "Fixed page": "Fixed page",
+  "Name already exist": "Name already exists",
+  "Only work at development environment": "Only works in development environment",
+  "This is a test mail": "Test mail",
+  "This is a test mail content": "This is a test mail — %s",
+  "Send mail failed": "Send mail failed",
+  "File extension is not allowed": "File extension is not allowed"
+}

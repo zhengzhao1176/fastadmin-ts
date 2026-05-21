@@ -1,0 +1,46 @@
+<div class="panel panel-default panel-intro">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-8">
+        <input type="text" class="form-control" id="addon-search" placeholder="{{ __('Search') }}">
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="javascript:;" class="btn btn-info btn-local-install"><i class="fa fa-upload"></i> {{ __('Local install') }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row" id="addon-list">{{ addonCardsHtml|raw }}</div>
+  </div>
+</div>
+<script type="text/javascript">
+(function bootAddon(){
+  if (typeof require === 'undefined' || typeof $ === 'undefined') return setTimeout(bootAddon, 30);
+  require(['jquery','toastr','layer'], function ($, Toastr, Layer) {
+    function refresh() { location.reload(); }
+    function ajaxAction(action, data, okMsg) {
+      $.post(action, data, function (r) {
+        if (r.code == 1) { Toastr.success(okMsg || r.msg || 'OK'); setTimeout(refresh, 700); }
+        else { Toastr.error(r.msg || 'Failed'); }
+      }, 'json');
+    }
+    $(document).on('click', '.addon-action', function (e) {
+      e.preventDefault();
+      var $btn = $(this);
+      var name = $btn.data('name');
+      var action = $btn.data('action');
+      if (action === 'install') ajaxAction('/admin.php/addon/install', { name: name });
+      else if (action === 'uninstall') ajaxAction('/admin.php/addon/uninstall', { name: name });
+      else if (action === 'enable') ajaxAction('/admin.php/addon/state', { name: name, action: 'enable' });
+      else if (action === 'disable') ajaxAction('/admin.php/addon/state', { name: name, action: 'disable' });
+    });
+    $('#addon-search').on('input', function () {
+      var q = $(this).val().toLowerCase();
+      $('#addon-list .addon-card').each(function () {
+        var match = $(this).data('search').toString().toLowerCase().indexOf(q) >= 0;
+        $(this).toggle(match);
+      });
+    });
+  });
+})();
+</script>

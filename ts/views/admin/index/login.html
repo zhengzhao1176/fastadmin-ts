@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{> common/meta }}
+  <style type="text/css">
+    body { color: #999; background-color: #f1f4fd; background-size: cover; }
+    a { color: #444; }
+    .login-screen { max-width: 430px; padding: 0; margin: 100px auto 0 auto; }
+    .login-screen .well {
+      border-radius: 3px;
+      -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 1);
+      border: none;
+      padding: 0;
+    }
+    @media (max-width: 767px) { .login-screen { padding: 0 20px; } }
+    .profile-img-card {
+      width: 100px; height: 100px; display: block;
+      border-radius: 50%;
+      margin: -93px auto 30px;
+      border: 5px solid #fff;
+    }
+    .profile-name-card { text-align: center; }
+    .login-head { background: #899fe1; border-radius: 3px 3px 0 0; }
+    .login-form { padding: 40px 30px; position: relative; z-index: 99; }
+    #login-form { margin-top: 20px; }
+    #login-form .input-group { margin-bottom: 15px; }
+    #login-form .form-control { font-size: 13px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="login-wrapper">
+    <div class="login-screen">
+      <div class="well">
+        <div class="login-head">
+          <img src="/assets/img/login-head.png" style="width:100%;" alt=""/>
+        </div>
+        <div class="login-form">
+          <img id="profile-img" class="profile-img-card" src="/assets/img/avatar.png" alt=""/>
+          <p id="profile-name" class="profile-name-card"></p>
+          <form action="/admin.php/index/login" method="post" id="login-form">
+            <div id="errtips" class="hide"></div>
+            <input type="hidden" name="__token__" value="{{ __token__ }}">
+            <div class="input-group">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+              <input type="text" class="form-control" id="pd-form-username" placeholder="用户名" name="username" autocomplete="off" data-rule="用户名:required;username"/>
+            </div>
+            <div class="input-group">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+              <input type="password" class="form-control" id="pd-form-password" placeholder="密码" name="password" autocomplete="off" data-rule="密码:required;password"/>
+            </div>
+            <div class="form-group checkbox">
+              <label class="inline" for="keeplogin">
+                <input type="checkbox" name="keeplogin" id="keeplogin" value="1"/>
+                保持登录
+              </label>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success btn-lg btn-block" style="background:#708eea;">登录</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{> common/script }}
+</body>
+</html>

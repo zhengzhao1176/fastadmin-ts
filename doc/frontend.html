@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>前端 - FastAdmin框架文档 - FastAdmin开发文档</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="renderer" content="webkit">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="前端 - FastAdmin框架文档 - FastAdmin开发文档">
+        <meta property="og:description" content="">
+        <link rel="shortcut icon" href="_assets/static.fastadmin.net/assets/addons/docs/images/favicon.ico"/>
+
+        <!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+                <link href="_assets/static.fastadmin.net/assets/addons/docs/css/all.min.css" id="layuicss-layer" rel="stylesheet" type="text/css">
+                
+    </head>
+    <body class="page addon">
+        <script>document.body.className += (" " + document.cookie.match('(^|;)\\s*fatheme\\s*=\\s*([^;]+)')?.pop() + "-theme");</script>
+
+        <header id="header">
+    <div class="header-inner">
+        <button class="sidebar-toggle" id="btn-sidebar">☰</button>
+        <a href="index.html" class="logo">
+            <img src="_assets/static.fastadmin.net/assets/img/logo.svg" style="height:40px;">
+        </a>
+                <div class="app-selector">
+            <div class="app-name">
+                <a href="index.html" title="FastAdmin框架文档">FastAdmin框架文档</a>            </div>
+                    </div>
+                <div class="search-box">
+            <form id="search-form" action="https://www.fastadmin.net/search/result" method="get" target="_blank">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="keyword" id="search-query" placeholder="全站搜索" class="search-query local-search-input st-default-search-input">
+            </form>
+            <div class="local-search-result"></div>
+        </div>
+        <div class="header-nav">
+                        <a href="https://www.fastadmin.net" class="">首页</a>
+                        <a href="https://www.fastadmin.net/store.html" class="">插件市场</a>
+                        <a href="https://www.fastadmin.net/wxapp.html" class="">小程序</a>
+                        <a href="https://www.fastadmin.net/uniapp.html" class="">Uni-app</a>
+                        <a href="https://www.fastadmin.net/download.html" class="">下载</a>
+                        <a href="https://www.fastadmin.net/demo.html" class="">演示</a>
+                        <a href="index.html" class="">文档</a>
+                        <a href="https://ask.fastadmin.net" class="">问答</a>
+                        <a href="https://www.fastadmin.net/video.html" class="">视频</a>
+                        <a href="https://www.fastadmin.net/user/index.html" class="dropdown-toggle" data-toggle="dropdown">会员中心</a>
+        </div>
+        <div class="header-actions with-nav">
+                        <button class="nav-toggle" id="btn-mobile-nav" title="菜单">›</button>
+        </div>
+    </div>
+</header>
+
+        <!--@formatter:off-->
+<style>
+    </style>
+<!--@formatter:on-->
+<div id="main" class="fix-sidebar" data-url="https://www.fastadmin.net/developer/docs/name/doc/version/default">
+    <!-- Sidebar 侧边栏 -->
+    <aside id="sidebar">
+        <div class="sidebar-section">
+            <div class="my-4">
+                <input type="text" placeholder="搜索FastAdmin框架文档" class="search-input" data-name="doc" data-id="155" data-version="default">
+                            </div>
+                        <ul class="sidebar-nav">
+                <li class='  ' data-id='146' ><a href='index.html' class='sidebar-link '>介绍</a> </li><li class='  ' data-id='147' ><a href='install.html' class='sidebar-link '>安装</a> </li><li class='  ' data-id='1589' ><a href='1589.html' class='sidebar-link '>快速开始</a> </li><li class='  ' data-id='150' ><a href='construct.html' class='sidebar-link '>架构</a> </li><li class='haschild collapsed  ' data-id='2461' ><em></em><a href='2461.html' class='sidebar-link '>配置</a> <ul ><li class='  ' data-id='2483' ><a href='2483.html' class='sidebar-link '>框架 env 变量配置</a> </li><li class='  ' data-id='2484' ><a href='2484.html' class='sidebar-link '>框架默认配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='154' ><em></em><a href='module.html' class='sidebar-link '>模块</a> <ul ><li class='  ' data-id='168' ><a href='168.html' class='sidebar-link '>后台模块</a> </li><li class='  ' data-id='166' ><a href='166.html' class='sidebar-link '>前台模块</a> </li><li class='  ' data-id='167' ><a href='167.html' class='sidebar-link '>API 模块</a> </li><li class='  ' data-id='169' ><a href='169.html' class='sidebar-link '>公共模块</a> </li></ul></li><li class='haschild collapsed  ' data-id='148' ><em></em><a href='command.html' class='sidebar-link '>命令行</a> <ul ><li class='  ' data-id='160' ><a href='crud.html' class='sidebar-link '>一键生成CRUD</a> </li><li class='  ' data-id='161' ><a href='161.html' class='sidebar-link '>一键生成菜单</a> </li><li class='  ' data-id='162' ><a href='162.html' class='sidebar-link '>一键压缩打包</a> </li><li class='  ' data-id='163' ><a href='163.html' class='sidebar-link '>一键生成API文档</a> </li><li class='  ' data-id='164' ><a href='164.html' class='sidebar-link '>一键管理插件</a> </li><li class='  ' data-id='165' ><a href='165.html' class='sidebar-link '>其他命令</a> </li></ul></li><li class='  ' data-id='151' ><a href='language.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='152' ><a href='database.html' class='sidebar-link '>数据库</a> </li><li class='  ' data-id='153' ><a href='controller.html' class='sidebar-link '>控制器</a> </li><li class=' selected ' data-id='155' ><a href='frontend.html' class='sidebar-link current'>前端</a> </li><li class='haschild collapsed  ' data-id='156' ><em></em><a href='component.html' class='sidebar-link '>组件</a> <ul ><li class='  ' data-id='177' ><a href='177.html' class='sidebar-link '>文件上传</a> </li><li class='  ' data-id='178' ><a href='178.html' class='sidebar-link '>动态下拉(SelectPage)</a> </li><li class='  ' data-id='179' ><a href='179.html' class='sidebar-link '>表单验证</a> </li><li class='  ' data-id='180' ><a href='180.html' class='sidebar-link '>城市选择</a> </li><li class='  ' data-id='181' ><a href='181.html' class='sidebar-link '>日期时间</a> </li><li class='  ' data-id='182' ><a href='182.html' class='sidebar-link '>下拉列表</a> </li><li class='  ' data-id='183' ><a href='183.html' class='sidebar-link '>附件选择</a> </li><li class='  ' data-id='184' ><a href='184.html' class='sidebar-link '>键值组件(Fieldlist)</a> </li><li class='  ' data-id='185' ><a href='185.html' class='sidebar-link '>开关组件</a> </li><li class='  ' data-id='186' ><a href='186.html' class='sidebar-link '>滑块组件</a> </li><li class='  ' data-id='187' ><a href='187.html' class='sidebar-link '>富文本编辑器</a> </li><li class='  ' data-id='736' ><a href='736.html' class='sidebar-link '>日期时间区间</a> </li><li class='  ' data-id='1206' ><a href='1206.html' class='sidebar-link '>自动完成(Autocomplete)</a> </li><li class='  ' data-id='1207' ><a href='1207.html' class='sidebar-link '>标签输入</a> </li><li class='  ' data-id='1253' ><a href='1253.html' class='sidebar-link '>动态显示(Favisible)</a> </li></ul></li><li class='haschild collapsed  ' data-id='188' ><em></em><a href='table.html' class='sidebar-link '>表格</a> <ul ><li class='  ' data-id='189' ><a href='189.html' class='sidebar-link '>实例化</a> </li><li class='  ' data-id='190' ><a href='190.html' class='sidebar-link '>表格参数</a> </li><li class='  ' data-id='191' ><a href='191.html' class='sidebar-link '>列参数</a> </li><li class='  ' data-id='192' ><a href='192.html' class='sidebar-link '>方法</a> </li><li class='  ' data-id='193' ><a href='193.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='194' ><a href='194.html' class='sidebar-link '>事件</a> </li><li class='  ' data-id='195' ><a href='195.html' class='sidebar-link '>格式化</a> </li><li class='  ' data-id='196' ><a href='196.html' class='sidebar-link '>依赖</a> </li><li class='  ' data-id='197' ><a href='197.html' class='sidebar-link '>Table对象</a> </li></ul></li><li class='haschild collapsed  ' data-id='1262' ><em></em><a href='1262.html' class='sidebar-link '>扩展</a> <ul ><li class='  ' data-id='1263' ><a href='1263.html' class='sidebar-link '>函数</a> </li><li class='  ' data-id='1264' ><a href='1264.html' class='sidebar-link '>辅助类</a> </li></ul></li><li class='haschild collapsed  ' data-id='149' ><em></em><a href='addon.html' class='sidebar-link '>插件</a> <ul ><li class='  ' data-id='175' ><a href='175.html' class='sidebar-link '>插件市场</a> </li><li class='  ' data-id='173' ><a href='173.html' class='sidebar-link '>目录结构</a> </li><li class='  ' data-id='174' ><a href='174.html' class='sidebar-link '>行为事件</a> </li><li class='  ' data-id='176' ><a href='176.html' class='sidebar-link '>插件安装</a> </li><li class='  ' data-id='1864' ><a href='1864.html' class='sidebar-link '>插件配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='3886' ><em></em><a href='3886.html' class='sidebar-link '>安全建议</a> <ul ><li class='  ' data-id='157' ><a href='security.html' class='sidebar-link '>安全建议</a> </li><li class='  ' data-id='170' ><a href='170.html' class='sidebar-link '>代码安全</a> </li><li class='  ' data-id='171' ><a href='171.html' class='sidebar-link '>服务器安全</a> </li></ul></li><li class='  ' data-id='158' ><a href='faq.html' class='sidebar-link '>常见问题</a> </li><li class='haschild collapsed  ' data-id='159' ><em></em><a href='contributing.html' class='sidebar-link '>参与开源生态贡献</a> <ul ><li class='  ' data-id='2482' ><a href='2482.html' class='sidebar-link '>贡献代码</a> </li></ul></li><li class='  ' data-id='1452' ><a href='1452.html' class='sidebar-link '>参考文档列表</a> </li>            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb" style="display:none;">
+        <a href="index.html">首页</a> <span class="sep">/</span>
+        <a href="#">安装部署</a> <span class="sep">/</span>
+        <span class="current">升级</span>
+    </div>
+
+    <!-- 文档头部信息 -->
+    <div class="doc-header">
+                <h1 data-id="155" data-eid="V4v5">前端</h1>
+                <div class="doc-meta">
+            <span class="meta-item">更新于: 2023-12-14 21:21:53</span>
+            <span class="meta-item">文档著作权归开发者所有，未经许可，禁止转载、复制此文档的任何内容。</span>
+        </div>
+
+        <span class="doc-operation">
+                    </span>
+    </div>
+    <div class="article-content">
+    <h2 id="基础介绍-1">基础介绍</h2><p>FastAdmin的前端部分使用或涉及到的是<code>RequireJS</code>,<code>jQuery</code>,<code>AdminLTE</code>,<code>Bower</code>,<code>Less</code>,<code>CSS</code>。其中：</p><p><code>RequireJS</code>主要是用于JS的模块化加载。</p><p><code>Bower</code>主要用于管理第三方插件。</p><p><code>Less</code>主要是用于我们编写LESS和编译成CSS代码。</p><p>在阅读接下来的文档之前建议先简单的了解下<code>RequireJS</code>和<code>Bower</code>，而<code>jQuery</code>是我们必须要掌握的工具库</p><p>FastAdmin中前端的常用的第三方插件有<code>Layer</code>,<code>Toastr</code>，<code>Layer</code>用于弹窗，<code>Toastr</code>用于提示。</p><h2 id="目录结构-2">目录结构</h2><pre title=""><code>public
+├── assets
+│   ├── addons
+│   ├── css
+│   ├── fonts
+│   ├── img
+│   ├── js
+│   │   ├── backend
+│   │   ├── frontend
+│   ├── less
+│   └── libs</code></pre><p><code>assets</code>主要存在我们框架所需要使用到的静态资源。</p><p><code>assets/js/backend</code>主要存在后台控制器所对应的JS模块。</p><p><code>assets/libs</code>主要存在第三方的插件。</p><p><code>assets/less</code>主要存在Less文件。</p><p><code>assets/img</code>主要存在图片相关文件。</p><p><code>assets/css</code>主要存在CSS样式相关文件。</p><p><code>assets/addons</code>主要存放插件的相关静态资源。</p><h2 id="标准模块-3">标准模块</h2><p>在控制器章节我们有提到每个控制器都对应一个JS模块，控制器名称和JS中模块名称是一一对应的。</p><p>比如我们的控制器是<code>application/admin/controller/Article.php</code>，则我们JS中对应的JS模块是<code>public/assets/js/backend/article.js</code>。</p><p>如果我们的控制器是<code>application/admin/controller/Member/Teacher.php</code>，则我们JS中对应的JS模块是<code>public/assets/js/backend/member/teacher.js</code>。</p><p>每一个控制器请求的方法对应JS模块中一个方法。</p><p>比如控制器<code>Article.php</code>中的<code>index</code>方法，对应的是JS的article模块中的<code>Controller.index</code>方法，如果我们添加了自己的方法<code>detail</code>方法，则对应<code>Controller.detail</code>方法。</p><p>一个JS标准控制器模块的写法如下：</p><pre title=""><code class="language-js">define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefined, Backend, Table, Form) {
+
+    var Controller = {
+        index: function () {
+            // 初始化表格参数配置
+            Table.api.init({
+                extend: {
+                    index_url: 'category/index',
+                    add_url: 'category/add',
+                    edit_url: 'category/edit',
+                    del_url: 'category/del',
+                    multi_url: 'category/multi',
+                    dragsort_url: '',
+                    table: 'category',
+                }
+            });
+
+            var table = $(&quot;#table&quot;);
+
+            // 初始化表格
+            table.bootstrapTable({
+                url: $.fn.bootstrapTable.defaults.extend.index_url,
+                escape: false,
+                pk: 'id',
+                sortName: 'weigh',
+                pagination: false,
+                commonSearch: false,
+                columns: [
+                    [
+                        {checkbox: true},
+                        {field: 'id', title: __('Id')},
+                        {field: 'type', title: __('Type')},
+                        {field: 'name', title: __('Name'), align: 'left'},
+                        {field: 'nickname', title: __('Nickname')},
+                        {field: 'flag', title: __('Flag'), operate: false, formatter: Table.api.formatter.flag},
+                        {field: 'image', title: __('Image'), operate: false, formatter: Table.api.formatter.image},
+                        {field: 'weigh', title: __('Weigh')},
+                        {field: 'status', title: __('Status'), operate: false, formatter: Table.api.formatter.status},
+                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                    ]
+                ]
+            });
+
+            // 为表格绑定事件
+            Table.api.bindevent(table);
+        },
+        add: function () {
+            Controller.api.bindevent();
+        },
+        edit: function () {
+            Controller.api.bindevent();
+        },
+        api: {
+            bindevent: function () {
+                Form.api.bindevent($(&quot;form[role=form]&quot;));
+            }
+        }
+    };
+    return Controller;
+});</code></pre><p>我们可以看到该模块第一行为<code>RequireJS</code>标准语法，意思是此模块依赖<code>'jquery', 'bootstrap', 'backend', 'table', 'form'</code>几个模块，同时将它们加载为<code>$, undefined, Backend, Table, Form</code>这几个对应，我们就可以放心大胆在其中使用这几个对象了。</p><p>其中有定义一个<code>Controller</code> 对象，它有<code>index/add/edit/api</code>四个方法，这四个方法分别与我们控制器中的方法一一对应。</p><h2 id="工具模块-4">工具模块</h2><p>在FastAdmin中我们封装了非常多实用的模块类便于我们使用。以下做详细介绍。</p><h3 id="表单(Form)-1">表单(Form)</h3><p>表单模块主要用于框架表单组件元素的渲染和事件绑定，当我们自定义了一个表单后，必须使用表单模块中<code>Form.api.bindevent</code>进行绑定表单，否则不会有任何作用。</p><h4 id="引入方式-1">引入方式</h4><pre title=""><code class="language-js">require(['form'], function(Form){});</code></pre><h4 id="内部方法-2">内部方法</h4><pre title=""><code class="language-js">//为表单绑定事件，将自动绑定上传/富文本/下拉框/selectpage/表单验证等功能，FastAdmin中最常用的方法，
+Form.api.bindevent(form, success, error, submit);
+
+//表单自定义事件存储对象
+Form.api.custom
+
+//提交表单的方法，在表单完成验证后进行提交
+Form.api.submit(form, success, error, submit);
+
+//以下事件为具体第三方插件实现的方法，可以在调用`Form.api.bindevent`之前修改对应的方法来修改相应功能
+Form.events.bindevent(form)
+Form.events.citypicker(form)
+Form.events.cxselect(form)
+Form.events.datetimepicker(form)
+Form.events.faselect(form)
+Form.events.fieldlist(form)
+Form.events.faupload(form)
+Form.events.selectpage(form)
+Form.events.selectpicker(form)
+Form.events.slider(form)
+Form.events.autocomplete(form)
+Form.events.tagsinput(form)
+Form.events.validator(form, success, error, submit)</code></pre><h4 id="使用示例-3">使用示例</h4><pre title=""><code class="language-js">Form.api.bindevent($(&quot;form[role=form]&quot;), function(data, ret){
+    //如果我们需要在提交表单成功后做跳转，可以在此使用location.href=&quot;链接&quot;;进行跳转
+    Toastr.success(&quot;成功&quot;);
+}, function(data, ret){
+      Toastr.success(&quot;失败&quot;);
+}, function(success, error){
+    //bindevent的第四个参数为提交前的回调
+    //如果我们需要在表单提交前做一些数据处理，则可以在此方法处理
+    //注意如果我们需要阻止表单，可以在此使用return false;即可
+    //如果我们处理完成需要再次提交表单则可以使用submit提交,注意这里的this应当为表单元素如下
+    //Form.api.submit(this, success, error);
+    return false;
+});</code></pre><p>以上代码表格当表单提交处理成功后提示成功，处理失败提示失败。</p><h3 id="上传(Upload)-2">上传(Upload)</h3><p>上传模块主要用于框架JS端的上传逻辑，默认采用<code>upload</code>进行上传，也可以采用Ajax的方法进行上传，<code>upload</code>的方法上传支持上传进度展示。</p><h4 id="引入方式-4">引入方式</h4><pre title=""><code class="language-js">require(['upload'], function(Upload){});</code></pre><h4 id="内部方法-5">内部方法</h4><pre title=""><code class="language-js">//为表单中的上传按钮绑定上传事件
+Upload.api.upload(element, onUploadSuccess, onUploadError);
+
+//上传自定义事件存储对象
+Upload.api.custom
+
+//采用Ajax的方法进行上传文件
+//file: 文件流
+//onUploadSuccess: 成功的回调
+//onUploadError: 失败的回调
+Upload.api.send(file, onUploadSuccess, onUploadError);
+
+//plupload上传组件配置
+Upload.config.classname
+Upload.config.container
+Upload.config.previewtpl
+
+//upload上传事件配置
+Upload.event.onBeforeUpload(up, file);
+Upload.event.onFileAdded(up, files);
+Upload.event.onPostInit(up);
+Upload.event.onUploadError(ret, onUploadError, button);
+Upload.event.onUploadResponse(response);
+Upload.event.onUploadSuccess(ret, onUploadSuccess, button);</code></pre><h4 id="使用示例-6">使用示例</h4><pre title=""><code class="language-js">//使用Plupload上传
+Upload.api.plupload($(&quot;.plupload&quot;), function(data, ret){
+    Toastr.success(&quot;成功&quot;);
+}, function(data, ret){
+      Toastr.success(&quot;失败&quot;);
+});
+//使用Ajax上传
+Upload.api.send(file, function(data, ret){
+    Toastr.success(&quot;成功&quot;);
+}, function(data, ret){
+      Toastr.success(&quot;失败&quot;);
+});</code></pre><p>以上代码表格当表单提交处理成功后提示成功，处理失败提示失败。</p><h3 id="表格(Table)-3">表格(Table)</h3><p>表格模块主要用于渲染数据列表，对数据列表进行排序、过滤、筛选、绑定事件、增删改查等等操作。我们在CRUD一键生成后看到的列表就是使用表格模块进行完成的。</p><h4 id="引入方式-7">引入方式</h4><pre title=""><code class="language-js">require(['table'], function(Table){});</code></pre><h4 id="内部方法-8">内部方法</h4><pre title=""><code class="language-js">//为渲染的表格绑定上增删改查等事件
+Table.api.bindevent(table);
+//生成按钮链接
+Table.api.buttonlink(column, buttons, value, row, index, type);
+//表格格式化对象集，包含多个格式化数据的方法
+Table.api.formatter
+//根据行获取行数据
+Table.api.getrowdata(table, index)
+//初始化表格配置
+Table.api.init(defaults, columnDefaults, locales)
+//表格批量操作的方法
+Table.api.multi
+//替换URL链接中的{变量名}
+Table.api.replaceurl
+//获取选中的ID
+Table.api.selectedids
+
+//Bootstrap-table表格默认列的配置
+Table.columnDefaults
+//表格相关DOM元素类配置
+Table.config
+//Bootstrap-table默认config配置
+Table.defaults
+//已经渲染的表格对象
+Table.list</code></pre><h4 id="使用示例-9">使用示例</h4><pre title=""><code class="language-js">// 初始化表格参数配置
+Table.api.init({
+    extend: {
+        index_url: 'category/index',
+        add_url: 'category/add',
+        edit_url: 'category/edit',
+        del_url: 'category/del',
+        multi_url: 'category/multi',
+        dragsort_url: '',
+        table: 'category',
+    }
+});
+
+var table = $(&quot;#table&quot;);
+
+// 初始化表格
+table.bootstrapTable({
+    url: $.fn.bootstrapTable.defaults.extend.index_url,
+    escape: false,
+    pk: 'id',
+    sortName: 'weigh',
+    pagination: false,
+    commonSearch: false,
+    columns: [
+        [
+            {checkbox: true},
+            {field: 'id', title: __('Id')},
+            {field: 'type', title: __('Type')},
+            {field: 'name', title: __('Name'), align: 'left'},
+            {field: 'nickname', title: __('Nickname')},
+            {field: 'flag', title: __('Flag'), operate: false, formatter: Table.api.formatter.flag},
+            {field: 'image', title: __('Image'), operate: false, formatter: Table.api.formatter.image},
+            {field: 'weigh', title: __('Weigh')},
+            {field: 'status', title: __('Status'), operate: false, formatter: Table.api.formatter.status},
+            {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+        ]
+    ]
+});
+
+// 为表格绑定事件
+Table.api.bindevent(table);</code></pre><p>表格的详细介绍可以查看一张图解表格：<a href="https://ask.fastadmin.net/article/323.html">https://ask.fastadmin.net/article/323.html</a></p>    </div>
+
+        <div class="doc-links">
+        <!--@formatter:off-->
+                    <span>
+                                ← <a href="controller.html" data-id="153">控制器</a>
+                            </span>
+            <span>
+                                <a href="component.html" data-id="156">组件</a> →
+                            </span>
+                <!--@formatter:on-->
+    </div>
+    
+    <div class="docs-footer">
+        <!--@formatter:off-->
+                    未解决你的问题？请到「<a href="https://ask.fastadmin.net" target="_blank">问答社区</a>」反馈你遇到的问题
+                    <!--@formatter:on-->
+    </div>
+
+    
+</main>
+
+
+    <aside id="toc" class="toc"></aside>
+
+</div>
+
+<div class="floatbar" id="floatbar" style="margin-top: -360px;">
+        <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-toc">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/toc.svg" />
+            </i>
+            <p>
+                文档<br>
+                目录
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-theme">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/theme.svg" />
+            </i>
+            <p>
+                深色<br>
+                模式
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn backtotop" style="display:none;">
+            <i class="fa">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/backtotop.svg" />
+            </i>
+            <p>
+                回到<br>
+                顶部
+            </p>
+        </a>
+    </div>
+</div>
+
+
+        
+
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">
+            Copyright © 2017~2026 <a href="https://www.fastadmin.net">FastAdmin</a> All Rights Reserved
+            <a href="https://www.fastadmin.net/news/69.html">FastAdmin著作权</a>
+            <a href="https://www.fastadmin.net/page/yyzz.html" target="_blank">营业执照</a>
+            <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备15054802号-4</a><br>
+            深圳极速创想科技有限公司 版权所有 <br>未经许可，禁止转载、复制此文档的任何内容。
+        </div>
+</div>
+</footer>
+
+<!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+<script src="_assets/static.fastadmin.net/assets/addons/docs/js/all.min.js"></script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "name": "fastadmin-ts",
+  "version": "0.0.1",
+  "private": true,
+  "description": "TypeScript port of FastAdmin (NestJS). Validated by the same black-box test suite as the PHP baseline.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --import=@swc-node/register/esm-register src/main.ts",
+    "start:dev": "node --import=@swc-node/register/esm-register src/main.ts",
+    "think": "node --import=@swc-node/register/esm-register bin/think.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "sync-assets": "rsync -a --delete ../fastAdmin/public/assets/ public/assets/",
+    "build:sentry-browser": "esbuild src/browser-sentry-entry.ts --bundle --minify --format=iife --target=es2017 --platform=browser --outfile=public/assets/js/sentry-browser.bundle.js",
+    "smoke": "bash scripts/smoke.sh"
+  },
+  "bin": {
+    "think": "./bin/think.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.4.0",
+    "@nestjs/core": "^10.4.0",
+    "@nestjs/platform-express": "^10.4.0",
+    "@nestjs/typeorm": "^10.0.2",
+    "@sentry/browser": "^10.53.1",
+    "@sentry/nestjs": "^10.53.1",
+    "@sentry/profiling-node": "^10.53.1",
+    "@types/adm-zip": "^0.5.8",
+    "@types/body-parser": "^1.19.6",
+    "@types/multer": "^2.1.0",
+    "adm-zip": "^0.5.17",
+    "body-parser": "^2.2.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "commander": "^14.0.3",
+    "cookie-parser": "^1.4.7",
+    "esbuild": "^0.28.0",
+    "express": "^4.21.0",
+    "express-session": "^1.19.0",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.10.1",
+    "multer": "^2.1.1",
+    "mysql2": "^3.11.5",
+    "nodemailer": "^8.0.7",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "sharp": "^0.34.5",
+    "svg-captcha": "^1.4.0",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@swc-node/register": "^1.11.1",
+    "@swc/core": "^1.15.33",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.19.0",
+    "@types/node": "^22.10.0",
+    "@types/nodemailer": "^8.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  }
+}

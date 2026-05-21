@@ -1,0 +1,70 @@
+name: PHP baseline (docker full)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# This is the "everything" workflow — uses docker-compose, runs CLI tests too.
+# The other workflow (baseline.yml) runs in CI's native local-mode without docker.
+jobs:
+  full:
+    name: docker-compose + 40 test files
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install npm deps
+        run: npm ci
+
+      # Cache the PHP image so subsequent runs skip the long build.
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build PHP image (with cache)
+        uses: docker/build-push-action@v6
+        with:
+          context: docker/php
+          load: true
+          tags: fastadmin-test-php:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Compose up (mysql + redis + mailhog + php)
+        run: |
+          cp .env.test .env.test.local
+          # Pre-set the image name so compose skips re-build.
+          ( cd docker && docker compose --env-file ../.env.test up -d )
+
+      - name: Wait for HTTP
+        run: bash scripts/wait-for-server.sh
+
+      - name: Seed / reset DB
+        run: npx tsx scripts/reset-db.ts
+
+      - name: Type-check
+        run: npx tsc --noEmit
+
+      - name: Run full vitest suite (40 files)
+        run: npx vitest run
+
+      - name: Tear down stack
+        if: always()
+        run: ( cd docker && docker compose --env-file ../.env.test down -v ) || true
+
+      - name: Capture docker logs on failure
+        if: failure()
+        run: |
+          docker ps -a || true
+          for c in fastadmin-test-php-1 fastadmin-test-mysql-1 fastadmin-test-redis-1 fastadmin-test-mailhog-1; do
+            echo "=== $c ===" && docker logs --tail=200 "$c" 2>&1 || true
+          done

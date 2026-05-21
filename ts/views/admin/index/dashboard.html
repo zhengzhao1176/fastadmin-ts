@@ -1,0 +1,54 @@
+<div class="panel panel-default panel-intro">
+  <div class="panel-heading">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab-stat" data-toggle="tab">系统概览</a></li>
+    </ul>
+  </div>
+  <div class="panel-body">
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="tab-stat">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="info-box"><span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
+              <div class="info-box-content"><span class="info-box-text">Total user / 总会员数</span>
+                <span class="info-box-number">{{ totaluser }}</span></div></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="info-box"><span class="info-box-icon bg-green"><i class="fa fa-cogs"></i></span>
+              <div class="info-box-content"><span class="info-box-text">Total addon / 插件数</span>
+                <span class="info-box-number">{{ totaladdon }}</span></div></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="info-box"><span class="info-box-icon bg-yellow"><i class="fa fa-list"></i></span>
+              <div class="info-box-content"><span class="info-box-text">Database count / 数据表数</span>
+                <span class="info-box-number">{{ dbtablenums }}</span></div></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="info-box"><span class="info-box-icon bg-red"><i class="fa fa-clock-o"></i></span>
+              <div class="info-box-content"><span class="info-box-text">Real time</span>
+                <span class="info-box-number">{{ realtime }}</span></div></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><div class="box"><div class="box-header"><h3 class="box-title">Today user signup / 今日注册</h3></div>
+            <div class="box-body"><span class="info-box-number">{{ todayusersignup }}</span></div></div></div>
+          <div class="col-md-6"><div class="box"><div class="box-header"><h3 class="box-title">Register user / 注册用户数</h3></div>
+            <div class="box-body"><span class="info-box-number">{{ totaluser }}</span></div></div></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><div class="box"><div class="box-header"><h3 class="box-title">7-day signup trend</h3></div>
+            <div class="box-body">
+              <!-- echart_user kept for verification-curl backwards compat; echart is the canonical PHP id consumed by backend/dashboard.js -->
+              <div id="echart" class="btn-refresh" style="height:300px;width:100%;"></div>
+              <div id="echart_user" style="display:none;"></div>
+            </div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  window.Config = window.Config || {};
+  window.Config.column = {{ columnJson|raw }};
+  window.Config.userdata = {{ userdataJson|raw }};
+</script>

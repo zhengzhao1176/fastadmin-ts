@@ -1,0 +1,36 @@
+{
+  "name": "fastadmin-test-suite",
+  "version": "0.1.0",
+  "description": "Language-agnostic black-box test suite for FastAdmin (PHP baseline + TypeScript port acceptance).",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:smoke": "vitest run tests/helpers/__smoke__.test.ts",
+    "typecheck": "tsc --noEmit",
+    "db:reset": "tsx scripts/reset-db.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "server:start": "bash scripts/start-server.sh",
+    "server:stop": "bash scripts/stop-server.sh",
+    "server:wait": "bash scripts/wait-for-server.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "axios": "^1.7.9",
+    "axios-cookiejar-support": "^5.0.5",
+    "form-data": "^4.0.1",
+    "mysql2": "^3.11.5",
+    "tough-cookie": "^5.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@sentry/browser": "^10.53.1"
+  }
+}

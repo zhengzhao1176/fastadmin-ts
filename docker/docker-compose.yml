@@ -1,0 +1,75 @@
+name: fastadmin-test
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_for_test}
+      MYSQL_DATABASE: ${DB_NAME:-fastadmin_test}
+      MYSQL_USER: ${DB_USER:-fastadmin_test}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-fastadmin_test}
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+      - --sql-mode=NO_ENGINE_SUBSTITUTION
+    ports:
+      - "${DB_PORT:-3787}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-p${DB_ROOT_PASSWORD:-root_for_test}"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6787}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  # SMTP capture for tests. Mails are captured in-memory and exposed via HTTP.
+  #   SMTP : mailhog:1025  (inside compose network) / 127.0.0.1:1025 from host
+  #   UI/API: 127.0.0.1:8025  (HTTP — /api/v2/messages lists captured mails)
+  mailhog:
+    image: mailhog/mailhog:latest
+    restart: unless-stopped
+    ports:
+      - "${MAILHOG_SMTP_PORT:-1025}:1025"
+      - "${MAILHOG_HTTP_PORT:-8025}:8025"
+
+  php:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mailhog:
+        condition: service_started
+    environment:
+      # ThinkPHP reads via \think\Env::get('xxx.yyy') which maps to env var XXX_YYY.
+      # The .env file inside fastAdmin/ is the primary source; this is a backup.
+      DATABASE_HOSTNAME: mysql
+      DATABASE_DATABASE: ${DB_NAME:-fastadmin_test}
+      DATABASE_USERNAME: ${DB_USER:-fastadmin_test}
+      DATABASE_PASSWORD: ${DB_PASSWORD:-fastadmin_test}
+      DATABASE_HOSTPORT: 3306
+      DATABASE_PREFIX: ${DB_PREFIX:-fa_}
+    volumes:
+      - ../fastAdmin:/app
+    ports:
+      - "8787:80"
+
+volumes:
+  mysql_data:

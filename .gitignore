@@ -1,0 +1,50 @@
+# NOTE: paths that should match only at the repo root are anchored with a
+# leading slash — an un-anchored `dist/` would also swallow the vendored
+# front-end libraries under ts/public/assets/libs/*/dist/.
+
+# ---- dependencies ----------------------------------------------------------
+node_modules/
+
+# ---- build output ----------------------------------------------------------
+/dist/
+/ts/dist/
+/coverage/
+
+# ---- PHP reference implementation -----------------------------------------
+# The original FastAdmin PHP project is third-party (GPL) and is NOT committed.
+# It is only needed to run the black-box parity test suite — see README.
+/fastAdmin/
+
+# ---- runtime / generated ---------------------------------------------------
+/ts/runtime/
+/ts/uploads/
+/docker/data/
+
+# ---- local environment (contains local credentials) -----------------------
+# Copy .env.test.example -> .env.test and fill in your own values.
+.env.test
+.env.local
+.env
+
+# ---- scratch / working directories ----------------------------------------
+/task/
+/task0514/
+/v/
+
+# ---- doc mirror internals --------------------------------------------------
+# doc/*.html (the FastAdmin usage docs) ARE committed; the crawl tooling,
+# screenshots and QA logs under doc/_meta/ are not.
+/doc/_meta/
+
+# ---- editor / OS / tooling -------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+.claude/
+.playwright/
+.playwright-cli/
+*.log
+
+# ---- test artifacts --------------------------------------------------------
+/tests/.report.json
+/tests/.snapshots/

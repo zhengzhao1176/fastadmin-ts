@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>列参数 - FastAdmin框架文档 - FastAdmin开发文档</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="renderer" content="webkit">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="列参数 - FastAdmin框架文档 - FastAdmin开发文档">
+        <meta property="og:description" content="">
+        <link rel="shortcut icon" href="_assets/static.fastadmin.net/assets/addons/docs/images/favicon.ico"/>
+
+        <!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+                <link href="_assets/static.fastadmin.net/assets/addons/docs/css/all.min.css" id="layuicss-layer" rel="stylesheet" type="text/css">
+                
+    </head>
+    <body class="page addon">
+        <script>document.body.className += (" " + document.cookie.match('(^|;)\\s*fatheme\\s*=\\s*([^;]+)')?.pop() + "-theme");</script>
+
+        <header id="header">
+    <div class="header-inner">
+        <button class="sidebar-toggle" id="btn-sidebar">☰</button>
+        <a href="index.html" class="logo">
+            <img src="_assets/static.fastadmin.net/assets/img/logo.svg" style="height:40px;">
+        </a>
+                <div class="app-selector">
+            <div class="app-name">
+                <a href="index.html" title="FastAdmin框架文档">FastAdmin框架文档</a>            </div>
+                    </div>
+                <div class="search-box">
+            <form id="search-form" action="https://www.fastadmin.net/search/result" method="get" target="_blank">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="keyword" id="search-query" placeholder="全站搜索" class="search-query local-search-input st-default-search-input">
+            </form>
+            <div class="local-search-result"></div>
+        </div>
+        <div class="header-nav">
+                        <a href="https://www.fastadmin.net" class="">首页</a>
+                        <a href="https://www.fastadmin.net/store.html" class="">插件市场</a>
+                        <a href="https://www.fastadmin.net/wxapp.html" class="">小程序</a>
+                        <a href="https://www.fastadmin.net/uniapp.html" class="">Uni-app</a>
+                        <a href="https://www.fastadmin.net/download.html" class="">下载</a>
+                        <a href="https://www.fastadmin.net/demo.html" class="">演示</a>
+                        <a href="index.html" class="">文档</a>
+                        <a href="https://ask.fastadmin.net" class="">问答</a>
+                        <a href="https://www.fastadmin.net/video.html" class="">视频</a>
+                        <a href="https://www.fastadmin.net/user/index.html" class="dropdown-toggle" data-toggle="dropdown">会员中心</a>
+        </div>
+        <div class="header-actions with-nav">
+                        <button class="nav-toggle" id="btn-mobile-nav" title="菜单">›</button>
+        </div>
+    </div>
+</header>
+
+        <!--@formatter:off-->
+<style>
+    </style>
+<!--@formatter:on-->
+<div id="main" class="fix-sidebar" data-url="https://www.fastadmin.net/developer/docs/name/doc/version/default">
+    <!-- Sidebar 侧边栏 -->
+    <aside id="sidebar">
+        <div class="sidebar-section">
+            <div class="my-4">
+                <input type="text" placeholder="搜索FastAdmin框架文档" class="search-input" data-name="doc" data-id="191" data-version="default">
+                            </div>
+                        <ul class="sidebar-nav">
+                <li class='  ' data-id='146' ><a href='index.html' class='sidebar-link '>介绍</a> </li><li class='  ' data-id='147' ><a href='install.html' class='sidebar-link '>安装</a> </li><li class='  ' data-id='1589' ><a href='1589.html' class='sidebar-link '>快速开始</a> </li><li class='  ' data-id='150' ><a href='construct.html' class='sidebar-link '>架构</a> </li><li class='haschild collapsed  ' data-id='2461' ><em></em><a href='2461.html' class='sidebar-link '>配置</a> <ul ><li class='  ' data-id='2483' ><a href='2483.html' class='sidebar-link '>框架 env 变量配置</a> </li><li class='  ' data-id='2484' ><a href='2484.html' class='sidebar-link '>框架默认配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='154' ><em></em><a href='module.html' class='sidebar-link '>模块</a> <ul ><li class='  ' data-id='168' ><a href='168.html' class='sidebar-link '>后台模块</a> </li><li class='  ' data-id='166' ><a href='166.html' class='sidebar-link '>前台模块</a> </li><li class='  ' data-id='167' ><a href='167.html' class='sidebar-link '>API 模块</a> </li><li class='  ' data-id='169' ><a href='169.html' class='sidebar-link '>公共模块</a> </li></ul></li><li class='haschild collapsed  ' data-id='148' ><em></em><a href='command.html' class='sidebar-link '>命令行</a> <ul ><li class='  ' data-id='160' ><a href='crud.html' class='sidebar-link '>一键生成CRUD</a> </li><li class='  ' data-id='161' ><a href='161.html' class='sidebar-link '>一键生成菜单</a> </li><li class='  ' data-id='162' ><a href='162.html' class='sidebar-link '>一键压缩打包</a> </li><li class='  ' data-id='163' ><a href='163.html' class='sidebar-link '>一键生成API文档</a> </li><li class='  ' data-id='164' ><a href='164.html' class='sidebar-link '>一键管理插件</a> </li><li class='  ' data-id='165' ><a href='165.html' class='sidebar-link '>其他命令</a> </li></ul></li><li class='  ' data-id='151' ><a href='language.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='152' ><a href='database.html' class='sidebar-link '>数据库</a> </li><li class='  ' data-id='153' ><a href='controller.html' class='sidebar-link '>控制器</a> </li><li class='  ' data-id='155' ><a href='frontend.html' class='sidebar-link '>前端</a> </li><li class='haschild collapsed  ' data-id='156' ><em></em><a href='component.html' class='sidebar-link '>组件</a> <ul ><li class='  ' data-id='177' ><a href='177.html' class='sidebar-link '>文件上传</a> </li><li class='  ' data-id='178' ><a href='178.html' class='sidebar-link '>动态下拉(SelectPage)</a> </li><li class='  ' data-id='179' ><a href='179.html' class='sidebar-link '>表单验证</a> </li><li class='  ' data-id='180' ><a href='180.html' class='sidebar-link '>城市选择</a> </li><li class='  ' data-id='181' ><a href='181.html' class='sidebar-link '>日期时间</a> </li><li class='  ' data-id='182' ><a href='182.html' class='sidebar-link '>下拉列表</a> </li><li class='  ' data-id='183' ><a href='183.html' class='sidebar-link '>附件选择</a> </li><li class='  ' data-id='184' ><a href='184.html' class='sidebar-link '>键值组件(Fieldlist)</a> </li><li class='  ' data-id='185' ><a href='185.html' class='sidebar-link '>开关组件</a> </li><li class='  ' data-id='186' ><a href='186.html' class='sidebar-link '>滑块组件</a> </li><li class='  ' data-id='187' ><a href='187.html' class='sidebar-link '>富文本编辑器</a> </li><li class='  ' data-id='736' ><a href='736.html' class='sidebar-link '>日期时间区间</a> </li><li class='  ' data-id='1206' ><a href='1206.html' class='sidebar-link '>自动完成(Autocomplete)</a> </li><li class='  ' data-id='1207' ><a href='1207.html' class='sidebar-link '>标签输入</a> </li><li class='  ' data-id='1253' ><a href='1253.html' class='sidebar-link '>动态显示(Favisible)</a> </li></ul></li><li class='haschild expanded selected ' data-id='188' ><em></em><a href='table.html' class='sidebar-link current'>表格</a> <ul ><li class='  ' data-id='189' ><a href='189.html' class='sidebar-link '>实例化</a> </li><li class='  ' data-id='190' ><a href='190.html' class='sidebar-link '>表格参数</a> </li><li class=' selected ' data-id='191' ><a href='191.html' class='sidebar-link current'>列参数</a> </li><li class='  ' data-id='192' ><a href='192.html' class='sidebar-link '>方法</a> </li><li class='  ' data-id='193' ><a href='193.html' class='sidebar-link '>多语言</a> </li><li class='  ' data-id='194' ><a href='194.html' class='sidebar-link '>事件</a> </li><li class='  ' data-id='195' ><a href='195.html' class='sidebar-link '>格式化</a> </li><li class='  ' data-id='196' ><a href='196.html' class='sidebar-link '>依赖</a> </li><li class='  ' data-id='197' ><a href='197.html' class='sidebar-link '>Table对象</a> </li></ul></li><li class='haschild collapsed  ' data-id='1262' ><em></em><a href='1262.html' class='sidebar-link '>扩展</a> <ul ><li class='  ' data-id='1263' ><a href='1263.html' class='sidebar-link '>函数</a> </li><li class='  ' data-id='1264' ><a href='1264.html' class='sidebar-link '>辅助类</a> </li></ul></li><li class='haschild collapsed  ' data-id='149' ><em></em><a href='addon.html' class='sidebar-link '>插件</a> <ul ><li class='  ' data-id='175' ><a href='175.html' class='sidebar-link '>插件市场</a> </li><li class='  ' data-id='173' ><a href='173.html' class='sidebar-link '>目录结构</a> </li><li class='  ' data-id='174' ><a href='174.html' class='sidebar-link '>行为事件</a> </li><li class='  ' data-id='176' ><a href='176.html' class='sidebar-link '>插件安装</a> </li><li class='  ' data-id='1864' ><a href='1864.html' class='sidebar-link '>插件配置</a> </li></ul></li><li class='haschild collapsed  ' data-id='3886' ><em></em><a href='3886.html' class='sidebar-link '>安全建议</a> <ul ><li class='  ' data-id='157' ><a href='security.html' class='sidebar-link '>安全建议</a> </li><li class='  ' data-id='170' ><a href='170.html' class='sidebar-link '>代码安全</a> </li><li class='  ' data-id='171' ><a href='171.html' class='sidebar-link '>服务器安全</a> </li></ul></li><li class='  ' data-id='158' ><a href='faq.html' class='sidebar-link '>常见问题</a> </li><li class='haschild collapsed  ' data-id='159' ><em></em><a href='contributing.html' class='sidebar-link '>参与开源生态贡献</a> <ul ><li class='  ' data-id='2482' ><a href='2482.html' class='sidebar-link '>贡献代码</a> </li></ul></li><li class='  ' data-id='1452' ><a href='1452.html' class='sidebar-link '>参考文档列表</a> </li>            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb" style="display:none;">
+        <a href="index.html">首页</a> <span class="sep">/</span>
+        <a href="#">安装部署</a> <span class="sep">/</span>
+        <span class="current">升级</span>
+    </div>
+
+    <!-- 文档头部信息 -->
+    <div class="doc-header">
+                <h1 data-id="191" data-eid="V4v5">列参数</h1>
+                <div class="doc-meta">
+            <span class="meta-item">更新于: 2025-11-05 17:02:54</span>
+            <span class="meta-item">文档著作权归开发者所有，未经许可，禁止转载、复制此文档的任何内容。</span>
+        </div>
+
+        <span class="doc-operation">
+                    </span>
+    </div>
+    <div class="article-content">
+    <p>列参数定义在 <code>jQuery.fn.bootstrapTable.columnDefaults</code>，我们在实例化章节中配置<code>columns</code>的参数中可以使用以下参数。</p><table  class="table table-responsive">
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>标签</th>
+        <th>类型</th>
+        <th>默认</th>
+        <th>描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>radio</td>
+        <td>data-radio</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>是否显示为单选按钮</td>
+    </tr>
+    <tr>
+        <td>checkbox</td>
+        <td>data-checkbox</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>是否显示为筛选框</td>
+    </tr>
+    <tr>
+        <td>field</td>
+        <td>data-field</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>字段名称</td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>data-title</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>字段标题</td>
+    </tr>
+    <tr>
+        <td>titleTooltip</td>
+        <td>data-title-tooltip</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>标题的Tooltip</td>
+    </tr>
+    <tr>
+        <td>class</td>
+        <td>class / data-class</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>列的Class名称</td>
+    </tr>
+    <tr>
+        <td>rowspan</td>
+        <td>rowspan / data-rowspan</td>
+        <td>Number</td>
+        <td>undefined</td>
+        <td>合并的行数</td>
+    </tr>
+    <tr>
+        <td>colspan</td>
+        <td>colspan / data-colspan</td>
+        <td>Number</td>
+        <td>undefined</td>
+        <td>合并的列数</td>
+    </tr>
+    <tr>
+        <td>align</td>
+        <td>data-align</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>对齐方式，支持'left', 'right', 'center'</td>
+    </tr>
+    <tr>
+        <td>halign</td>
+        <td>data-halign</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>标题对齐方式，支持'left', 'right', 'center'</td>
+    </tr>
+    <tr>
+        <td>falign</td>
+        <td>data-falign</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>表Footer对齐方式，支持'left', 'right', 'center'</td>
+    </tr>
+    <tr>
+        <td>valign</td>
+        <td>data-valign</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>垂直对齐方式，支持'top', 'middle', 'bottom'</td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>data-width</td>
+        <td>Number {Pixels or Percentage}</td>
+        <td>undefined</td>
+        <td>列宽度，支持固定数值百分比</td>
+    </tr>
+    <tr>
+        <td>sortable</td>
+        <td>data-sortable</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>是否允许排序</td>
+    </tr>
+    <tr>
+        <td>order</td>
+        <td>data-order</td>
+        <td>String</td>
+        <td>'asc'</td>
+        <td>升序或降序，支持'asc' 'desc'.</td>
+    </tr>
+    <tr>
+        <td>visible</td>
+        <td>data-visible</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>是否可见</td>
+    </tr>
+    <tr>
+        <td>cardVisible</td>
+        <td>data-card-visible</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>是否在Card模式下显示</td>
+    </tr>
+    <tr>
+        <td>switchable</td>
+        <td>data-switchable</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>是否可切换显示</td>
+    </tr>
+    <tr>
+        <td>clickToSelect</td>
+        <td>data-click-to-select</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>是否启用点击选中行</td>
+    </tr>
+    <tr>
+        <td>formatter</td>
+        <td>data-formatter</td>
+        <td>Function</td>
+        <td>undefined</td>
+        <td>格式化输出，FastAdmin框架自带的formatter可参考<code>格式化</code>章节文档。参数 <br>
+        value: 当前字段值 <br>
+        row: 行数据<br>
+        index: 行索引</td>
+    </tr>
+    <tr>
+        <td>footerFormatter</td>
+        <td>data-footer-formatter</td>
+        <td>Function</td>
+        <td>undefined</td>
+        <td>列底部格式化输出: <br>
+        data: 列表数据
+    </tr>
+    <tr>
+        <td>events</td>
+        <td>data-events</td>
+        <td>Object</td>
+        <td>undefined</td>
+        <td>列元素事件<br>
+        event: jQuery事件<br>
+        value: 当前字段值 <br>
+        row: 行数据<br>
+        index: 行索引
+        </td>
+    </tr>
+    <tr>
+        <td>sorter</td>
+        <td>data-sorter</td>
+        <td>Function</td>
+        <td>undefined</td>
+        <td>本地排序: <br>
+        a: 第一个字段的值<br>
+        b: 第二个字段的值<br>
+        rowA: 第一行数据<br>
+        rowB: 第二行数据
+        </td>
+    </tr>
+    <tr>
+        <td>sortName</td>
+        <td>data-sort-name</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>排序字段名称</td>
+    </tr>    
+    <tr>
+        <td>cellStyle</td>
+        <td>data-cell-style</td>
+        <td>Function</td>
+        <td>undefined</td>
+        <td>单元格样式: <br>
+        value: 当前字段值 <br>
+        row: 行数据<br>
+        index: 行索引
+        field: 字段名<br>
+        支持class或样式
+        </td>
+    </tr>
+    <tr>
+        <td>searchable</td>
+        <td>data-searchable</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>
+        是否允许搜索
+        </td>
+    </tr>
+    <tr>
+        <td>searchFormatter</td>
+        <td>data-search-formatter</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>
+        是否搜索格式化后的内容
+        </td>
+    </tr>
+    <tr>
+        <td>escape</td>
+        <td>data-escape</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>是否对HTML代码进行编码, 将替换<code>&amp;, &lt;, &gt;, &quot;, \</code>,'`等字符</td>
+    </tr>
+    <tr>
+        <td>showSelectTitle</td>
+        <td>data-show-select-title</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>
+        是否显示列标题
+        </td>
+    </tr>
+    <tr>
+        <td>renderDefault</td>
+        <td>data-render-default</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>
+        是否根据URL参数渲染高级搜索默认值
+        </td>
+    </tr>
+    <tr>
+        <td>extend</td>
+        <td>data-extend</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>
+        渲染高级搜索中元素的扩展参数，默认为空
+        </td>
+    </tr>
+    <tr>
+        <td>style</td>
+        <td>data-style</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>
+        渲染高级搜索中元素的样式，默认为空
+        </td>
+    </tr>
+    <tr>
+        <td>searchList</td>
+        <td>data-search-list</td>
+        <td>Mixed</td>
+        <td>undefined</td>
+        <td>
+        渲染高级搜索中Select下拉列表
+        </td>
+    </tr>
+    <tr>
+        <td>placeholder</td>
+        <td>data-placeholder</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>
+        渲染高级搜索中Input的Placeholder
+        </td>
+    </tr>
+    <tr>
+        <td>defaultValue</td>
+        <td>data-default-value</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>
+        渲染高级搜索中Input的默认值
+        </td>
+    </tr>
+</tbody>
+</table><h3 id="searchList格式说明-1">searchList格式说明</h3><p><code>searchList</code>仅支持<code>Object</code>和<code>二维数组</code></p><p><code>searchList</code>返回的值只能是<code>关联数组</code>或<code>二维数组</code>，如：</p><pre title=""><code>{&quot;normal&quot;:&quot;正常&quot;, &quot;hidden&quot;:&quot;隐藏&quot;}</code></pre><p>或者</p><pre title=""><code>[
+    {&quot;id&quot;:&quot;normal&quot;, &quot;name&quot;:&quot;正常&quot;},
+    {&quot;id&quot;:&quot;hidden&quot;, &quot;name&quot;:&quot;隐藏&quot;}
+]</code></pre><p>如果返回<code>[&quot;正常&quot;,&quot;隐藏&quot;]</code>，搜索时会将值作为参数值进行传递。</p><p>如果在服务端一定要使用数值键名返回，建议参考使用<code>json_encode</code>的<code>JSON_FORCE_OBJECT</code>来实现</p><pre title=""><code>return json_encode([&quot;正常&quot;,&quot;隐藏&quot;], JSON_FORCE_OBJECT);</code></pre>    </div>
+
+        <div class="doc-links">
+        <!--@formatter:off-->
+                    <span>
+                                ← <a href="190.html" data-id="190">表格参数</a>
+                            </span>
+            <span>
+                                <a href="192.html" data-id="192">方法</a> →
+                            </span>
+                <!--@formatter:on-->
+    </div>
+    
+    <div class="docs-footer">
+        <!--@formatter:off-->
+                    未解决你的问题？请到「<a href="https://ask.fastadmin.net" target="_blank">问答社区</a>」反馈你遇到的问题
+                    <!--@formatter:on-->
+    </div>
+
+    
+</main>
+
+
+    <aside id="toc" class="toc"></aside>
+
+</div>
+
+<div class="floatbar" id="floatbar" style="margin-top: -360px;">
+        <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-toc">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/toc.svg" />
+            </i>
+            <p>
+                文档<br>
+                目录
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn toggle-theme">
+            <i class="fa fa-chevron-up">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/theme.svg" />
+            </i>
+            <p>
+                深色<br>
+                模式
+            </p>
+        </a>
+    </div>
+    <div class="floatbar-item floatbtn-item-top" style="">
+        <a href="javascript:" class="floatbar-btn backtotop" style="display:none;">
+            <i class="fa">
+                <img src="_assets/static.fastadmin.net/assets/addons/docs/images/backtotop.svg" />
+            </i>
+            <p>
+                回到<br>
+                顶部
+            </p>
+        </a>
+    </div>
+</div>
+
+
+        
+
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">
+            Copyright © 2017~2026 <a href="https://www.fastadmin.net">FastAdmin</a> All Rights Reserved
+            <a href="https://www.fastadmin.net/news/69.html">FastAdmin著作权</a>
+            <a href="https://www.fastadmin.net/page/yyzz.html" target="_blank">营业执照</a>
+            <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备15054802号-4</a><br>
+            深圳极速创想科技有限公司 版权所有 <br>未经许可，禁止转载、复制此文档的任何内容。
+        </div>
+</div>
+</footer>
+
+<!-- FastAdmin官网不是开源产品，所有文字、图片、样式、风格等版权归FastAdmin所有，如有复制、仿冒、抄袭、盗用，FastAdmin将追究法律责任 -->
+<script src="_assets/static.fastadmin.net/assets/addons/docs/js/all.min.js"></script>
+
+
+
+
+
+    </body>
+</html>

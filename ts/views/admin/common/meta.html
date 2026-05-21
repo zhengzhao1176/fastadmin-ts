@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<title>{{ title|default('FastAdmin') }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="referrer" content="never">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="shortcut icon" href="/assets/img/favicon.ico" />
+<link href="/assets/css/backend.css" rel="stylesheet">
+<!-- All AdminLTE + FastAdmin skins in one file so the `skin-*` body class
+     (driven by the `adminskin` cookie) takes effect with no per-skin link. -->
+<link href="/assets/css/skins/_all-skins.css" rel="stylesheet">
+<script type="text/javascript">
+  var require = {
+    config: {{ requireConfig|raw }}
+  };
+</script>
+<!--
+  Sentry browser SDK (errors + session replay). Loaded synchronously so
+  errors thrown by require.js / AdminLTE bootstrap are captured. The init
+  is no-op when require.config.sentry is absent (i.e. server SENTRY_DSN
+  unset). Bundle built via `npm run build:sentry-browser`.
+-->
+<script src="/assets/js/sentry-browser.bundle.js"></script>
+<script type="text/javascript">
+  if (window.__sentryInit && require.config && require.config.sentry) {
+    window.__sentryInit(require.config.sentry);
+  }
+</script>

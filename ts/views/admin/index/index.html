@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> common/meta }}
+  </head>
+  <body class="hold-transition {{ bodyClass|default('skin-black-blue sidebar-mini fixed multipletab') }}" id="tabs">
+    <div class="wrapper">
+      <!-- 头部区域 -->
+      <header id="header" class="main-header">
+        {{> common/header }}
+      </header>
+
+      <!-- 左侧菜单栏 -->
+      <aside class="main-sidebar">
+        {{> common/menu }}
+      </aside>
+
+      <!-- 主体内容区域 -->
+      <div class="content-wrapper tab-content tab-addtabs">
+      </div>
+
+      <!-- 底部链接,默认隐藏 -->
+      <footer class="main-footer hide">
+        <div class="pull-right hidden-xs"></div>
+        <strong>Copyright &copy; 2017 <a href="/">FastAdmin</a>.</strong> All rights reserved.
+      </footer>
+
+      <!-- 右侧控制栏 -->
+      <div class="control-sidebar-bg"></div>
+      {{> common/control }}
+    </div>
+
+    {{> common/script }}
+  </body>
+</html>

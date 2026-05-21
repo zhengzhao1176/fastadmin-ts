@@ -1,0 +1,133 @@
+name: PHP baseline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  baseline:
+    name: vitest run (PHP 7.4 FastAdmin baseline)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    services:
+      mysql:
+        image: mysql:8.0
+        ports:
+          - 3787:3306
+        env:
+          MYSQL_ROOT_PASSWORD: root_for_test
+          MYSQL_DATABASE: fastadmin_test
+          MYSQL_USER: fastadmin_test
+          MYSQL_PASSWORD: fastadmin_test
+        options: >-
+          --health-cmd="mysqladmin ping -uroot -proot_for_test"
+          --health-interval=3s
+          --health-timeout=3s
+          --health-retries=30
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6787:6379
+        options: >-
+          --health-cmd="redis-cli ping"
+          --health-interval=3s
+          --health-timeout=3s
+          --health-retries=30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install npm deps
+        run: npm ci
+
+      - name: Set up PHP 7.4
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: pdo_mysql, mbstring, bcmath, gd, zip, curl, redis, exif
+          ini-values: |
+            upload_max_filesize=64M
+            post_max_size=64M
+            memory_limit=512M
+            date.timezone=PRC
+          tools: composer:v2
+
+      - name: Cache composer vendor
+        uses: actions/cache@v4
+        with:
+          path: fastAdmin/vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('fastAdmin/composer.json') }}
+
+      - name: Install composer deps (if missing)
+        run: |
+          if [ ! -d fastAdmin/vendor/topthink ]; then
+            cd fastAdmin && composer install --no-interaction --no-progress --no-dev
+          fi
+
+      - name: Switch to local-mode stack (CI doesn't have Docker-in-Docker)
+        run: |
+          echo "STACK=local" >> "$GITHUB_ENV"
+          # Point local helpers at the CI service ports
+          cat > .env.test <<EOF
+          FASTADMIN_BASE_URL=http://127.0.0.1:8787
+          DB_HOST=127.0.0.1
+          DB_PORT=3787
+          DB_NAME=fastadmin_test
+          DB_USER=fastadmin_test
+          DB_PASSWORD=fastadmin_test
+          DB_ROOT_PASSWORD=root_for_test
+          DB_PREFIX=fa_
+          REDIS_HOST=127.0.0.1
+          REDIS_PORT=6787
+          REDIS_DB=0
+          STACK=local
+          EOF
+
+      - name: Patch helpers for local mode (no docker-exec CLI tests)
+        run: |
+          # CLI tests require docker exec — skip them in CI for now. They run
+          # locally via `bash scripts/start-server.sh` + vitest.
+          echo "SKIP_CLI=1" >> "$GITHUB_ENV"
+
+      - name: Start FastAdmin PHP server (local-mode `php -S`)
+        run: |
+          bash scripts/start-server.sh
+
+      - name: Reset & seed DB
+        run: npx tsx scripts/reset-db.ts
+
+      - name: Type-check
+        run: npx tsc --noEmit
+
+      - name: Run vitest (HTTP + cross-cutting; CLI skipped in CI)
+        env:
+          SKIP_CLI: '1'
+        run: |
+          # Phase 40 CLI tests use docker exec which doesn't apply in CI's
+          # local-mode runner. The other 34 files are runnable.
+          npx vitest run \
+            tests/helpers \
+            tests/admin tests/api tests/index \
+            tests/cross-cutting
+
+      - name: Stop server
+        if: always()
+        run: bash scripts/stop-server.sh || true
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitest-report
+          path: tests/.report.json
+          if-no-files-found: ignore
