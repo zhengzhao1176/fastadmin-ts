@@ -152,3 +152,11 @@ cd ts && npm run typecheck         # 类型检查
 - FastAdmin 官方文档（<https://doc.fastadmin.net/>）版权归 FastAdmin / 深圳极速创想科技有限公司所有，本仓库不包含其副本。
 - `ts/public/assets/` 下的前端资源来自 FastAdmin 及其依赖的开源库（Bootstrap / jQuery / bootstrap-table 等）。
 - PHP 原版 FastAdmin 遵循其自有许可协议，未包含在本仓库内。
+
+---
+
+## 联系我
+
+微信扫码联系作者：
+
+<img src="./wechat-qr.png" alt="WeChat QR" width="240" />
